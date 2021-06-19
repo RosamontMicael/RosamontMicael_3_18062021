@@ -1,0 +1,304 @@
+/* Background*/
+/*==========================================*/
+/*============PARAMETRES GENERAUX===========*/
+/*==========================================*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+*, *::after, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: black;
+}
+
+.blocpage {
+  width: 100%;
+  max-width: 1440px;
+  min-width: 375px;
+  margin: auto;
+  font-size: 15px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 20px;
+}
+.logo img {
+  height: 30px;
+}
+
+.localisation {
+  background: linear-gradient(to bottom, #cccccc 0%, #e6e6e6 10%);
+  width: 100%;
+}
+.localisation form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 20px;
+  padding: 0;
+  height: 50px;
+}
+.localisation__icone {
+  font-size: 1rem;
+  padding-right: 5px;
+  color: #1a1a1a;
+}
+.localisation__saisie {
+  width: auto;
+  height: auto;
+}
+.localisation__saisie input {
+  border: none;
+  width: 130px;
+  padding-left: 10px;
+  color: black;
+  background-color: #e6e6e6;
+}
+.localisation__saisie input::placeholder {
+  color: #4d4d4d;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.vitrine {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 30px;
+  flex-direction: column;
+  height: auto;
+  font-size: 1rem;
+  background-color: #f2f2f2;
+}
+.vitrine__titre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0px;
+  flex-direction: column;
+  font-weight: bold;
+  text-align: center;
+}
+.vitrine__message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0px;
+  flex-direction: column;
+  text-align: center;
+  color: gray;
+}
+.vitrine__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 15px;
+  position: relative;
+  flex-direction: column;
+  text-align: center;
+  display: block;
+  background: radial-gradient(ellipse at left top, #FF79DA 15%, #9356DC 100%);
+  border-radius: 30px;
+  color: white;
+  margin: 20px 0px;
+  z-index: 1;
+}
+.vitrine__btn:hover::after {
+  opacity: 1;
+}
+.vitrine__btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 30px;
+  background: radial-gradient(ellipse at right bottom, #FF79DA 15%, #9356DC 100%);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
+}
+
+.fonctionnement {
+  padding: 50px 20px;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 1100px) {
+  .fonctionnement {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+.fonctionnement__titre {
+  margin-bottom: 10px;
+  align-self: start;
+}
+@media screen and (min-width: 376px) {
+  .fonctionnement__titre {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+.fonctionnement__etape {
+  background-color: #f2f2f2;
+  padding: 25px 0px;
+  margin: 15px 0px;
+  border-radius: 20px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  box-shadow: 5px 5px 10px #d9d9d9;
+}
+.fonctionnement__etape--couleursecondaire {
+  background-color: #f2eafb;
+}
+.fonctionnement .cadrenumero {
+  color: white;
+  background-color: #9356DC;
+  width: 24px;
+  font-size: 0.9rem;
+  line-height: 24px;
+  border-radius: 12px;
+  text-align: center;
+  transform: translateX(-13px);
+  margin-right: 10px;
+}
+.fonctionnement .cadreicone {
+  color: gray;
+  font-size: 1.4rem;
+  text-align: center;
+  margin-right: 20px;
+}
+.fonctionnement .cadreconsigne {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.restaurant {
+  background-color: #f2f2f2;
+  padding: 60px 20px;
+}
+.restaurant__titre {
+  padding-bottom: 30px;
+}
+@media screen and (min-width: 376px) {
+  .restaurant__titre {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+.restaurant__grille {
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  grid-row-gap: 20px;
+}
+@media screen and (min-width: 771px) {
+  .restaurant__grille {
+    grid-template-columns: repeat(2, auto);
+    grid-column-gap: 20px;
+  }
+}
+.restaurant .card-prev {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: white;
+  border-radius: 15px 15px 15px 15px;
+  position: relative;
+  /*Autre solution pour les nouveaux resto
+  &:nth-child(1),
+  &:nth-child(2) {
+      &::after{
+
+      content:"Nouveau";
+      color:darken($couleur-tertiaire,40);
+      font-weight: bold;
+      background-color: $couleur-tertiaire;
+      width: 90px;
+      line-height: 25px;
+      position:absolute;
+      top:10px;
+      right:10px;
+      text-align: center;
+       }            
+
+  }*/
+}
+.restaurant .card-prev .card-prev__nouveau {
+  display: none;
+}
+.restaurant .card-prev--nouveau .card-prev__nouveau {
+  display: block;
+  color: #278870;
+  font-weight: bold;
+  background-color: #99E2D0;
+  width: 90px;
+  line-height: 25px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-align: center;
+}
+.restaurant .card-prev__photo {
+  width: 100%;
+}
+.restaurant .card-prev img {
+  height: 175px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 15px 15px 0px 0px;
+}
+.restaurant .card-prev__description {
+  padding: 15px 15px;
+  color: black;
+  font-size: 1rem;
+}
+.restaurant .card-prev__cadreiconecoeur {
+  padding: 15px 40px;
+  font-size: 1.5rem;
+}
+
+.footer {
+  padding: 20px 20px 35px 20px;
+  background-color: #333333;
+  color: white;
+  font-size: 0.95rem;
+}
+.footer__enseigne {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.2rem;
+  padding-bottom: 20px;
+}
+.footer a {
+  text-decoration: none;
+  color: white;
+}
+.footer__restaurateur, .footer__partenaire {
+  display: flex;
+  padding-bottom: 10px;
+}
+.footer__restaurateur .cadreicone, .footer__partenaire .cadreicone {
+  font-size: 0.75rem;
+  margin-right: 10px;
+}
+.footer__mention {
+  padding-bottom: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */

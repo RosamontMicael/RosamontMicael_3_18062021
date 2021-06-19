@@ -1,0 +1,329 @@
+@import "./utils/variable";
+@import "./utils/mixin";
+
+
+
+/*==========================================*/
+/*============PARAMETRES GENERAUX===========*/
+/*==========================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+*, *::after, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: black;
+ }
+
+.blocpage {  
+  width: 100%;
+  max-width: 1440px;
+  min-width: 375px;
+  margin: auto;
+  font-size: 15px;
+}
+
+.logo {
+    @include centrer;    
+        img {
+        height:30px;
+    }
+
+}
+
+.localisation { 
+    background:linear-gradient(to bottom,darken( white,20%) 0%,darken( white,10%) 10%); 
+    
+    width:100%; 
+        form {      
+        @include centrer;
+        padding:0;
+        height: 50px;
+        
+
+        } 
+
+        &__icone{            
+            font-size:1rem;
+            padding-right:5px; 
+            color:darken( white,90%);
+            
+        }
+
+        &__saisie {
+            width: auto;
+            height: auto;
+          
+
+            input {
+            border:none;
+            width:130px; 
+            padding-left:10px;
+            
+            color:black;
+            background-color: darken( white,10%);         
+            }
+
+            input::placeholder {            
+            color:darken( white,70%);
+            font-weight: 600;
+            font-size:1rem;
+                    
+            }
+        }
+    }
+
+
+.vitrine {
+    @include centrer(30px,30px);
+    flex-direction: column; height:auto;
+   font-size:1rem;
+   background-color: $fond-clair;   
+    
+    &__titre {
+        @include centrer(15px, 0px);
+        flex-direction: column;
+        font-weight: bold;text-align: center;  
+    }
+
+    &__message {    
+        @include centrer(15px, 0px);
+        flex-direction: column;  
+        text-align: center; 
+        color:darken( white,50%) 
+    }
+    &__btn {    
+         @include centrer(15px, 15px);
+         position:relative;
+        flex-direction: column;  
+        text-align: center; 
+        display: block;
+        background:radial-gradient(ellipse at left top,$couleur-secondaire 15%,$couleur-primaire 100%); 
+        border-radius: 30px;
+        color:white;
+        margin:20px 0px;
+        z-index: 1;
+        &:hover { 
+            &::after {                
+            opacity:1;
+            }
+        }
+        
+        &::after {
+            content:"";
+            position:absolute;
+            top:0;
+            right:0;
+            bottom:0;
+            left:0;
+            border-radius: 30px;
+            background:radial-gradient(ellipse at right bottom,$couleur-secondaire 15%,$couleur-primaire 100%);
+            opacity:0;
+            z-index:-1;
+            transition:opacity 250ms;
+        }
+    }    
+    
+}
+
+.fonctionnement {
+    padding: 50px 20px;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+
+    @media screen and (min-width:1100px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    &__titre {
+        margin-bottom:10px;
+        align-self: start;
+
+        @media screen and (min-width:376px) {
+        display: block;
+        width: 100%;
+        text-align: center;
+        }
+    }
+
+    &__etape {
+        background-color:$fond-clair;
+        padding:25px 0px;
+        margin:15px 0px; 
+        border-radius: 20px;
+        width:300px;
+        display: flex;
+        align-items: center;        
+        box-shadow: 5px 5px 10px darken( white,15%);        
+            &--couleursecondaire {
+                background-color:lighten($couleur-primaire ,35);
+            }
+    }
+
+    .cadrenumero {
+        color:white;
+        background-color: $couleur-primaire;
+        width:24px;
+        font-size: 0.9rem;  
+        line-height:24px;
+        border-radius: 12px;
+        text-align: center;
+        transform:translateX(-13px);
+        margin-right:10px;
+    }
+
+    .cadreicone {
+        color:darken( white,50%);
+        font-size: 1.4rem;                      
+        text-align: center;        
+        margin-right:20px;
+    }
+
+    .cadreconsigne {
+         font-size: 1.2rem; 
+         font-weight: bold;        
+    }
+}
+
+.restaurant {
+    background-color:$fond-clair ;
+    padding: 60px 20px;
+    &__titre {
+        padding-bottom: 30px;
+        @media screen and (min-width:376px) {
+        display: block;
+        width: 100%;
+        text-align: center;
+        }
+    }
+
+    &__grille {
+        display:grid;
+        grid-template-rows: repeat(4,auto);
+        grid-row-gap: 20px;
+
+        @media screen and (min-width:771px) {
+        grid-template-columns: repeat(2,auto);
+        grid-column-gap: 20px;
+        }
+
+    }
+
+    .card-prev {        
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        background-color: white;
+        border-radius: 15px 15px 15px 15px;
+        position: relative;
+
+        .card-prev__nouveau {
+            display: none;
+        }
+
+        &--nouveau  {            
+            .card-prev__nouveau {
+            display:block;
+            color:darken($couleur-tertiaire,40);
+            font-weight: bold;
+            background-color: $couleur-tertiaire;
+            width: 90px;
+            line-height: 25px;
+            position:absolute;
+            top:10px;
+            right:10px;
+            text-align: center;
+            }
+        }
+
+        
+
+        /*Autre solution pour les nouveaux resto
+        &:nth-child(1),
+        &:nth-child(2) {
+            &::after{
+           
+            content:"Nouveau";
+            color:darken($couleur-tertiaire,40);
+            font-weight: bold;
+            background-color: $couleur-tertiaire;
+            width: 90px;
+            line-height: 25px;
+            position:absolute;
+            top:10px;
+            right:10px;
+            text-align: center;
+             }            
+
+        }*/
+
+        &__photo {
+            width: 100%;
+        }
+        img {
+            height: 175px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 15px 15px 0px 0px;
+        }
+
+        &__description {            
+            padding: 15px 15px;
+            color:black;
+            font-size: 1rem;
+        }
+
+        &__cadreiconecoeur {
+            padding: 15px 40px;
+            font-size: 1.5rem;
+        }
+
+
+    }
+}
+
+.footer {
+    padding: 20px 20px 35px 20px;
+    background-color: darken(white,80);
+    color: white;
+    font-size: 0.95rem;
+    &__enseigne {
+        font-family: 'Shrikhand', cursive;
+        font-size: 1.2rem;
+        padding-bottom: 20px;
+    }
+
+    a {
+       
+        text-decoration: none;       
+        color: white;
+    }
+
+    &__restaurateur,
+    &__partenaire {
+        display: flex;
+        padding-bottom: 10px;
+
+        .cadreicone {
+            font-size: 0.75rem;
+            margin-right:10px;
+        }               
+    }
+
+    &__mention {
+        padding-bottom: 10px;
+    }
+    
+}

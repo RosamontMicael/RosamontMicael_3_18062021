@@ -1,0 +1,9 @@
+@mixin centrer(
+  $padtop_bottom: $padding-default1,
+  $padright_left: $padding-default2
+) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: $padtop_bottom $padright_left;
+}
