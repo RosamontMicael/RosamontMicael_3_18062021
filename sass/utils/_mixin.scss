@@ -7,3 +7,71 @@
   align-items: center;
   padding: $padtop_bottom $padright_left;
 }
+
+@mixin backg-darkn ($colors:$couleur-tertiaire,$proportion:10%) {
+  $colors2:darken($colors,$proportion);
+  background-color: $colors2;
+
+}
+
+@mixin backg-lightn ($colors:$couleur-tertiaire,$proportion:10%) {
+  $colors2:lighten($colors,$proportion);
+  background-color: $colors2;
+
+}
+
+@mixin box-shadow ($size1:5px,$size2:5px,$size3:10px,$couleur-shadow:darken(white,15%)) {
+  box-shadow: $size1 $size2 $size3 $couleur-shadow;
+}
+
+@mixin zoom ($echelle:1.02, $vitesse:800ms) {
+  transform: scale($echelle);
+  transition: transform $vitesse;
+}
+
+@mixin btn {    
+  @include centrer(15px, 15px);
+  display: block;
+  position:relative;
+  flex-direction: column;
+  width: 220px;
+  z-index: 1;
+
+  border-radius: 30px;
+  margin:20px 0px;
+
+  background:radial-gradient(ellipse at left top,$couleur-secondaire 15%,$couleur-primaire 100%); 
+  
+  text-align: center; 
+  color:white;
+  cursor:pointer;
+
+  &__full-width {
+    width:100%;
+  }
+        
+  &:hover {
+
+    @include box-shadow;
+    @include zoom;
+      &::after {                
+      opacity:1;
+      }
+  }
+        
+  &::after {
+      content:"";
+      position:absolute;
+      top:0;
+      right:0;
+      bottom:0;
+      left:0;
+      z-index:-1;
+      
+      border-radius: 30px;
+      
+      background:radial-gradient(ellipse at right bottom,$couls2 15%,$coulp2 100%);
+      opacity:0;      
+      transition:opacity 250ms;
+  }
+}  
