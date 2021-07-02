@@ -1,0 +1,255 @@
+.localisation {
+    width:100%;
+
+    background:linear-gradient(to bottom,darken( white,20%) 0%,$fond-primaire 10%);
+        &__conteneur {           
+            @include centrer (0, auto);
+            width: 100%;
+            height: 50px;
+            
+        } 
+
+        &__cadreicone {          
+            padding-right:5px;
+
+            color:darken( white,90%);
+            font-size:1rem;
+            
+        }
+
+        &__cadresaisie {
+            width: auto;
+            height: auto;
+          
+
+            input {
+            
+            width:130px;
+            height:40px;
+            
+            border:none;
+            padding-left:10px;
+                        
+            background-color: $fond-primaire;
+
+            color:black; 
+            }
+
+            input::placeholder {            
+            color:darken( white,70%);
+            font-weight: 600;
+            font-size:1rem;
+                    
+            }
+        }
+}
+
+
+.vitrine {
+    @include centrer(30px,30px);
+    flex-direction: column;
+    height:auto;
+    background-color: $fond-secondaire;
+    
+    font-size:1rem;  
+    
+    &__titre {
+        @include centrer(15px, 0px);
+        flex-direction: column;
+
+        text-align: center;
+        font-weight: bold;  
+    }
+
+    &__message {    
+        @include centrer(15px, 0px);
+        flex-direction: column;
+
+        text-align: center; 
+        color:darken( white,50%) 
+    }
+    &__conteneur {
+        @include centrer(0px, 0px);
+        flex-direction: column; 
+        width: 100%;
+        
+    }
+       
+    
+}
+
+.fonctionnement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 50px 20px;
+
+    font-size: 1rem;
+    
+    
+
+    @media screen and (min-width:1100px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    &__titre {
+        align-self: start;
+
+        margin-bottom:10px;
+        
+
+        @media screen and (min-width:376px) {
+        display: block;
+        width: 100%;
+        
+        text-align: center;
+        }
+    }
+
+    &__etape {
+        display: flex;
+        align-items: center;
+        width:300px;
+        
+        margin:15px 0px; 
+        border-radius: 20px;
+        @include box-shadow;
+
+        background-color:$fond-secondaire;
+        padding:25px 0px;        
+        cursor:pointer;
+
+            &:hover {
+                background-color:lighten($couleur-primaire ,35);
+                
+                @include zoom;
+                .cadreicone {
+                    color:$couleur-primaire;
+                }
+            }
+    }
+
+    .cadrenumero {        
+        width:24px;          
+        line-height:24px;
+
+        border-radius: 12px;
+        margin-right:10px;
+        
+        background-color: $couleur-primaire;
+
+        font-size: 0.9rem;
+        text-align: center;color:white;
+        transform:translateX(-13px);
+        
+    }
+
+    .cadreicone {
+        margin-right:20px;
+        
+        color:darken( white,50%);
+        font-size: 1.4rem;                      
+        text-align: center;        
+        
+    }
+
+    .cadreconsigne {
+         font-size: 1.2rem; 
+         font-weight: bold;        
+    }
+}
+
+.restaurant {
+    background-color:$fond-secondaire ;
+    padding: 60px 20px;
+    &__titre {
+        padding-bottom: 30px;
+
+        @media screen and (min-width:376px) {
+        display: block;
+        width: 100%;
+
+        text-align: center;
+        }
+    }
+
+    &__grille {
+        display:grid;
+        grid-template-rows: repeat(4,auto);
+        grid-row-gap: 20px;
+
+        @media screen and (min-width:771px) {
+        grid-template-columns: repeat(2,auto);
+        grid-column-gap: 20px;
+        }
+
+    }
+    
+}
+
+
+.card-prev {        
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    cursor:pointer;
+
+    border-radius: 15px;
+
+    background-color: $fond-tertiaire;   
+    
+
+    &:hover {
+        @include box-shadow;
+        @include zoom;
+    }
+
+    &__nouveau {
+        display:block;
+        width: 90px;
+        line-height: 25px;
+        position:absolute;
+        top:10px;
+        right:10px;
+        
+        background-color: $couleur-tertiaire;
+
+        color:darken($couleur-tertiaire,40);
+        font-weight: bold;
+        text-align: center;        
+                
+            &.card-prev__nouveau--invisible {
+                opacity:0; /* ou display:none*/
+            }
+    }
+        
+    &__photo {
+        width: 100%;
+    }
+    img {
+        width: 100%;
+        height: 175px;
+        object-fit: cover;
+        
+        border-radius: 15px 15px 0px 0px;
+    }
+
+    &__description {            
+        padding: 15px 15px;
+
+        color:black;
+        font-size: 1rem;
+    }
+
+    &__cadreiconecoeur {
+        padding: 15px 40px;
+        
+        font-size: 1.5rem;            
+             
+    }
+}
