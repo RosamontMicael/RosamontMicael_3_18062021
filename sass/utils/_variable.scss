@@ -2,8 +2,13 @@ $couleur-primaire:#9356DC;
 $couleur-secondaire:#FF79DA;
 $couleur-tertiaire:#99E2D0;
 
+$couls2:lighten($couleur-secondaire,2);
+$coulp2:lighten($couleur-primaire, 2);
+
 $padding-default1:20px;
 $padding-default2:20px;
 
 /* Background*/
-$fond-clair:darken( white,5%);
+$fond-primaire:darken( white,10%);
+$fond-secondaire:darken( white,5%);
+$fond-tertiaire:white;
