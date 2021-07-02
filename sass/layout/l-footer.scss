@@ -1,0 +1,37 @@
+.footer {    
+    background-color: darken(white,80);
+    padding: 20px 20px 35px 20px;
+
+    color: white;
+    font-size: 0.95rem;
+    &__enseigne {
+        padding-bottom: 20px;
+
+        font-family: 'Shrikhand', 'Roboto', sans-serif;
+        font-size: 1.2rem;
+        
+    }
+
+    a {       
+        text-decoration: none;       
+        color: white;
+    }
+
+    &__restaurateur,
+    &__partenaire {
+        display: flex;
+
+        padding-bottom: 10px;
+
+        .cadreicone {
+            margin-right:10px;
+
+           font-size: 0.75rem;
+        }               
+    }
+
+    &__mention {
+        padding-bottom: 10px;
+    }
+    
+}

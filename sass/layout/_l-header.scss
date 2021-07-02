@@ -1,0 +1,28 @@
+.header {
+    @include centrer  ;
+    justify-content: start;
+    
+    &__icone {
+        display: inline-block;
+        cursor: pointer;
+
+        font-size: 1.2rem;
+        
+        &--invisible.header__icone {
+           display: none;           
+        }
+        
+    }
+    &__logo {
+        position: relative;
+        left: 50%;
+        
+        transform: translateX(-50%);        
+            img {
+                height:30px;
+           }
+    }
+
+    
+
+}
