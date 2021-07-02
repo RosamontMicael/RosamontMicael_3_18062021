@@ -75,3 +75,44 @@
       transition:opacity 250ms;
   }
 }  
+
+@mixin categorie-type {
+display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5,auto);
+    row-gap: 10px;
+    grid-template-areas:
+    'titre'
+    'sep'
+    'bouton1'
+    'bouton2'
+    'bouton3';
+    
+    &__titre {
+        grid-area: titre;
+
+        margin-top: 10px;
+
+        text-transform:uppercase;
+        font-size: 1.1rem;
+    }
+    &__separateur {
+        grid-area: sep;
+
+        width: 45px;
+        height:1px;
+        border-top:cadetblue 2px solid;
+    }
+
+    &__bouton-choix1 {        
+        grid-area: bouton1;
+    }
+
+    &__bouton-choix2 {        
+        grid-area: bouton2;
+    }
+
+    &__bouton-choix3 {
+        grid-area: bouton3;
+    }
+}

@@ -7,3 +7,35 @@ Commandez*/
 .btn {
   @include btn;
 }
+
+/*Boutton de base pour:
+Choix du menu*/
+
+.btn-menus {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    max-width: 315px;
+
+    border-radius: 15px;
+    margin: auto;
+    
+        
+    background-color: $fond-tertiaire;
+    padding:10px 20px 10px 10px;
+    cursor:pointer;
+
+    
+    &__nom {
+        padding-bottom: 5px;
+    }
+    
+    &__prix {
+        font-weight: bold;
+    }
+    
+    &:hover {
+        @include box-shadow;
+        @include zoom;
+    }
+}

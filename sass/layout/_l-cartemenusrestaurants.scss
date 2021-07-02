@@ -1,0 +1,109 @@
+.carte {
+    
+    img {
+        width:100%;
+        height: 275px;
+        object-fit: cover;
+        
+        @media screen and ( min-width:1000px) {
+           height: 400px; 
+        }
+    }
+
+    &__menus {
+        position: relative;
+        top:-40px;
+        max-width:1000px;
+
+        border-radius: 40px 40px 0 0;
+        margin:auto;
+
+        background-color: $fond-secondaire;
+        padding: 40px 15px;
+
+        @media screen and ( min-width:1000px) {
+           top:-100px;
+        }
+        
+    }
+
+    @media screen and ( min-width:1000px) {
+
+    }
+}
+
+.menus {
+    display: grid;
+    grid-template-columns: 1fr 20%;
+    grid-template-rows: repeat(3,auto);
+    row-gap: 40px;  
+    grid-template-areas: 
+    'titre coeur' 
+    'grillcat grillcat'
+    'conteneur-btn conteneur-btn'
+    ;    
+
+    &__titre {
+        align-items: center;
+        grid-area: titre;
+        
+        
+        font-size: 1.6rem;
+                
+    }
+
+    &__cadreiconecoeur {
+        grid-area: coeur;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 1.6rem;
+                    
+       
+    }
+
+    &__grille-categories {
+        grid-area: grillcat;
+
+        @media screen and ( min-width:1000px) {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+        
+            column-gap: 15px;  
+            grid-template-areas: 
+            'entree plat dessert';
+        
+            .cat-entree {
+                grid-area: entree;
+            }
+
+            .cat-plat {
+               grid-area: plat;
+            }
+
+            .cat-dessert {
+                grid-area: dessert;
+            }
+        }
+    }
+
+    &__conteneur {
+        grid-area: conteneur-btn;
+        @include centrer(0px, 0px);
+    } 
+
+}
+
+.cat-entree {
+    @include categorie-type
+}
+
+.cat-plat {
+    @include categorie-type;
+}
+
+.cat-dessert {
+    @include categorie-type;
+}

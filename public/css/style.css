@@ -5,7 +5,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-*, *::after, *::after {
+*,
+*::after,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -105,7 +107,7 @@ body {
   flex-direction: column;
   text-align: center;
   display: block;
-  background: radial-gradient(ellipse at left top, #FF79DA 15%, #9356DC 100%);
+  background: radial-gradient(ellipse at left top, #ff79da 15%, #9356dc 100%);
   border-radius: 30px;
   color: white;
   margin: 20px 0px;
@@ -122,7 +124,11 @@ body {
   bottom: 0;
   left: 0;
   border-radius: 30px;
-  background: radial-gradient(ellipse at right bottom, #FF79DA 15%, #9356DC 100%);
+  background: radial-gradient(
+    ellipse at right bottom,
+    #ff79da 15%,
+    #9356dc 100%
+  );
   opacity: 0;
   z-index: -1;
   transition: opacity 250ms;
@@ -168,7 +174,7 @@ body {
 }
 .fonctionnement .cadrenumero {
   color: white;
-  background-color: #9356DC;
+  background-color: #9356dc;
   width: 24px;
   font-size: 0.9rem;
   line-height: 24px;
@@ -247,7 +253,7 @@ body {
   display: block;
   color: #278870;
   font-weight: bold;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   width: 90px;
   line-height: 25px;
   position: absolute;
@@ -289,11 +295,13 @@ body {
   text-decoration: none;
   color: white;
 }
-.footer__restaurateur, .footer__partenaire {
+.footer__restaurateur,
+.footer__partenaire {
   display: flex;
   padding-bottom: 10px;
 }
-.footer__restaurateur .cadreicone, .footer__partenaire .cadreicone {
+.footer__restaurateur .cadreicone,
+.footer__partenaire .cadreicone {
   font-size: 0.75rem;
   margin-right: 10px;
 }
