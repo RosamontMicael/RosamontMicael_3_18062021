@@ -165,6 +165,9 @@
 .restaurant {
     background-color:$fond-secondaire ;
     padding: 60px 20px;
+
+    font-size: 1rem;
+    
     &__titre {
         padding-bottom: 30px;
 
@@ -248,7 +251,7 @@
 
     &__cadreiconecoeur {
         padding: 15px 40px;
-        
+                
         font-size: 1.5rem;            
              
     }

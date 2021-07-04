@@ -528,6 +528,7 @@ Choix du menu*/
 .restaurant {
   background-color: #f2f2f2;
   padding: 60px 20px;
+  font-size: 1rem;
 }
 
 .restaurant__titre {
