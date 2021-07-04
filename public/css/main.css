@@ -22,6 +22,21 @@
   margin: auto;
 }
 
+/*-----KEYFRAMES-----*/
+@keyframes apparition {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 /* Typographie
 Polices:
 Logo et titres: Shrikhand
@@ -289,14 +304,17 @@ Choix du menu*/
 
 .cat-entree__bouton-choix1 {
   grid-area: bouton1;
+  animation: apparition 1000ms ease-out;
 }
 
 .cat-entree__bouton-choix2 {
   grid-area: bouton2;
+  animation: apparition 1000ms ease-out 150ms;
 }
 
 .cat-entree__bouton-choix3 {
   grid-area: bouton3;
+  animation: apparition 1000ms ease-out 300ms;
 }
 
 .cat-plat {
@@ -323,14 +341,17 @@ Choix du menu*/
 
 .cat-plat__bouton-choix1 {
   grid-area: bouton1;
+  animation: apparition 1000ms ease-out;
 }
 
 .cat-plat__bouton-choix2 {
   grid-area: bouton2;
+  animation: apparition 1000ms ease-out 150ms;
 }
 
 .cat-plat__bouton-choix3 {
   grid-area: bouton3;
+  animation: apparition 1000ms ease-out 300ms;
 }
 
 .cat-dessert {
@@ -357,14 +378,17 @@ Choix du menu*/
 
 .cat-dessert__bouton-choix1 {
   grid-area: bouton1;
+  animation: apparition 1000ms ease-out;
 }
 
 .cat-dessert__bouton-choix2 {
   grid-area: bouton2;
+  animation: apparition 1000ms ease-out 150ms;
 }
 
 .cat-dessert__bouton-choix3 {
   grid-area: bouton3;
+  animation: apparition 1000ms ease-out 300ms;
 }
 
 /*---------------------------------*/
