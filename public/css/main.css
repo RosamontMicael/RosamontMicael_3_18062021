@@ -1,7 +1,26 @@
 /*---------------------------------*/
 /*--------INFOS VARIABLES------*/
 /*---------------------------------*/
-/* Background*/
+/*---DEFINITION PALETTE----*/
+/* Background
+$fond-primaire:darken( white,10%);
+$fond-secondaire:darken( white,5%);
+$fond-tertiaire:white;
+
+$localisation-fond:#EAEAEA;
+$vitrine-fond:#F6F6F6;
+$btn-vitrine-fond:#9356DC;
+$btn-vitrine-fond--variante:#E671DA;
+
+$etape-fond:#F6F6F6;
+$etape-fond--variante:#F5EDFF;
+
+$nouveau-fond:#99E2D0;
+$nouveau-texte:#008766;
+
+$footer-fond:#353535;*/
+/*test map
+$couleur1:white;*/
 /*---------------------------------*/
 /*----PARAMETRES GENERAUX-----*/
 /*---------------------------------*/
@@ -20,6 +39,7 @@
   max-width: 1440px;
   min-width: 375px;
   margin: auto;
+  background-color: white;
 }
 
 /*-----KEYFRAMES-----*/
@@ -119,6 +139,7 @@ Choix du menu*/
   border-radius: 15px;
   margin: auto;
   background-color: white;
+  /*$fond-tertiaire;*/
   padding: 10px 20px 10px 10px;
   cursor: pointer;
 }
@@ -219,6 +240,7 @@ Choix du menu*/
   border-radius: 40px 40px 0 0;
   margin: auto;
   background-color: #f2f2f2;
+  /* $fond-secondaire;*/
   padding: 40px 15px;
 }
 

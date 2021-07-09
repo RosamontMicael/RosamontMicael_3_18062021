@@ -1,8 +1,8 @@
 .footer {    
-    background-color: darken(white,80);
+    background-color: darken($couleurFond1,80%);
     padding: 20px 20px 35px 20px;
 
-    color: white;
+    color: $couleurTexte1;
     font-size: 0.95rem;
     &__enseigne {
         padding-bottom: 20px;
@@ -14,7 +14,7 @@
 
     a {       
         text-decoration: none;       
-        color: white;
+        color: $couleurTexte1;
     }
 
     &__restaurateur,

@@ -20,7 +20,7 @@
 
 }
 
-@mixin box-shadow ($size1:5px,$size2:5px,$size3:10px,$couleur-shadow:darken(white,15%)) {
+@mixin box-shadow ($size1:5px,$size2:5px,$size3:10px,$couleur-shadow:darken($couleurFond1,15%)) {
   box-shadow: $size1 $size2 $size3 $couleur-shadow;
 }
 
@@ -43,7 +43,7 @@
   background:radial-gradient(ellipse at left top,$couleur-secondaire 15%,$couleur-primaire 100%); 
   
   text-align: center; 
-  color:white;
+  color:$couleurTexte1;
   cursor:pointer;
 
   &__full-width {
@@ -70,7 +70,7 @@
       
       border-radius: 30px;
       
-      background:radial-gradient(ellipse at right bottom,$couls2 15%,$coulp2 100%);
+      background:radial-gradient(ellipse at right bottom,$couleur-secondaire--2 15%,$couleur-primaire--2 100%);
       opacity:0;      
       transition:opacity 250ms;
   }

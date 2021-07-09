@@ -1,14 +1,37 @@
+/*---DEFINITION PALETTE----*/
+
 $couleur-primaire:#9356DC;
 $couleur-secondaire:#FF79DA;
 $couleur-tertiaire:#99E2D0;
+$couleurFond1:rgb(255, 255, 255);
+$couleurFond2:black;
+$couleurTexte1:white;
+$couleurTexte2:black;
 
-$couls2:lighten($couleur-secondaire,2);
-$coulp2:lighten($couleur-primaire, 2);
+
+$couleur-secondaire--2:lighten($couleur-secondaire,2%);
+$couleur-primaire--2:lighten($couleur-primaire, 2%);
 
 $padding-default1:20px;
 $padding-default2:20px;
 
-/* Background*/
+/* Background
 $fond-primaire:darken( white,10%);
 $fond-secondaire:darken( white,5%);
 $fond-tertiaire:white;
+
+$localisation-fond:#EAEAEA;
+$vitrine-fond:#F6F6F6;
+$btn-vitrine-fond:#9356DC;
+$btn-vitrine-fond--variante:#E671DA;
+
+$etape-fond:#F6F6F6;
+$etape-fond--variante:#F5EDFF;
+
+$nouveau-fond:#99E2D0;
+$nouveau-texte:#008766;
+
+$footer-fond:#353535;*/
+
+/*test map
+$couleur1:white;*/
