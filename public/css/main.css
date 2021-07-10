@@ -202,6 +202,36 @@ Choix du menu*/
   transform: rotate(0deg);
 }
 
+/*Parametres par defauts*/
+.coeur .cvide, .coeur .cplein {
+  color: black;
+  display: block;
+  font-size: 3rem;
+}
+
+.coeur .cvide .cplein, .coeur .cplein .cplein {
+  color: #FF79DA;
+  display: block;
+}
+
+.coeur .cvide {
+  position: relative;
+}
+
+.coeur .cvide:hover > .cplein {
+  transform: scale(1);
+}
+
+.coeur .cplein {
+  position: absolute;
+  top: 0px;
+  transform: scale(0);
+  opacity: 0.6;
+  transition: 2000ms ease-in;
+  transform-origin: bottom;
+  z-index: -1;
+}
+
 /*---------------------------------*/
 /*----LAYOUTS-----*/
 /*---------------------------------*/
@@ -703,6 +733,15 @@ Choix du menu*/
 
 .card-prev__cadreiconecoeur {
   padding: 15px 40px;
+}
+
+.card-prev__cadreiconecoeur .cvide {
+  color: black;
+  font-size: 1.5rem;
+}
+
+.card-prev__cadreiconecoeur .cvide .cplein {
+  color: #FF79DA;
   font-size: 1.5rem;
 }
 /*# sourceMappingURL=main.css.map */
