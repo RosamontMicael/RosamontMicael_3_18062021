@@ -133,29 +133,73 @@ Commandez*/
 Choix du menu*/
 .btn-menus {
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  max-width: 315px;
+  max-width: 350px;
+  height: 65px;
   border-radius: 15px;
   margin: auto;
   background-color: white;
   /*$fond-tertiaire;*/
-  padding: 10px 20px 10px 10px;
+  overflow: hidden;
   cursor: pointer;
-}
-
-.btn-menus__nom {
-  padding-bottom: 5px;
-}
-
-.btn-menus__prix {
-  font-weight: bold;
 }
 
 .btn-menus:hover {
   box-shadow: 5px 5px 10px #d9d9d9;
   transform: scale(1.02);
   transition: transform 800ms;
+}
+
+.btn-menus__description {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 10px 0px 10px 10px;
+  width: 70%;
+}
+
+.btn-menus__nom {
+  padding-bottom: 5px;
+  flex-wrap: nowrap;
+}
+
+.btn-menus__prix {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-weight: bold;
+  width: 10%;
+  height: 100%;
+  padding-bottom: 10px;
+  transform: translateX(150%);
+  transition: 1000ms ease-out;
+}
+
+.btn-menus:hover > .btn-menus__prix {
+  margin-left: 10px;
+  transform: translateX(-50%);
+}
+
+.btn-menus__cadreicone-check {
+  background-color: #99E2D0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  height: 100%;
+  transform: translateX(100%);
+  transition: 1000ms ease-out;
+}
+
+.btn-menus__cadreicone-check i {
+  transform: rotate(-180deg);
+  transition: 500ms 300ms ease-out;
+}
+
+.btn-menus:hover > .btn-menus__cadreicone-check {
+  transform: translateX(0);
+}
+
+.btn-menus:hover > .btn-menus__cadreicone-check i {
+  transform: rotate(0deg);
 }
 
 /*---------------------------------*/
@@ -190,6 +234,9 @@ Choix du menu*/
 }
 
 .footer {
+  /* position: sticky;  footer toujours visible*/
+  bottom: 0;
+  z-index: 30;
   background-color: #333333;
   padding: 20px 20px 35px 20px;
   color: white;

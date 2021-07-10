@@ -13,29 +13,76 @@ Choix du menu*/
 
 .btn-menus {
     display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    max-width: 315px;
+    
+    max-width: 350px;
+    height: 65px;
 
     border-radius: 15px;
     margin: auto;
-    
         
     background-color:$couleurFond1;/*$fond-tertiaire;*/
-    padding:10px 20px 10px 10px;
-    cursor:pointer;
+    overflow:hidden;
+    cursor:pointer;    
 
-    
-    &__nom {
-        padding-bottom: 5px;
-    }
-    
-    &__prix {
-        font-weight: bold;
-    }
-    
     &:hover {
         @include box-shadow;
         @include zoom;
     }
+
+
+    &__description {
+        white-space: nowrap;
+        text-overflow:ellipsis;
+        
+        padding:10px 0px 10px 10px;
+        width: 70%;
+        
+    }
+
+    &__nom {
+        padding-bottom: 5px;
+        flex-wrap: nowrap;
+    }
+    
+    &__prix {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        font-weight: bold;
+        width: 10%;height:100%;        
+
+        padding-bottom: 10px;
+        transform: translateX(150%);
+        transition: 1000ms ease-out;
+    }
+
+    &:hover > .btn-menus__prix {margin-left: 10px;
+         transform: translateX(-50%);
+    }
+    
+
+    &__cadreicone-check {
+        background-color: $couleur-tertiaire;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+        height:100%;    
+
+        transform: translateX(100%);
+        transition:1000ms ease-out ;
+        i {
+            transform: rotate(-180deg);
+            transition: 500ms 300ms ease-out;
+            
+        }
+    }
+    
+    &:hover > .btn-menus__cadreicone-check {
+        transform: translateX(0);
+        i {
+             transform: rotate(0deg);
+        }
+    }
+    
 }
