@@ -206,7 +206,7 @@ Choix du menu*/
 .coeur .cvide, .coeur .cplein {
   color: black;
   display: block;
-  font-size: 3rem;
+  font-size: 1.5;
 }
 
 .coeur .cvide .cplein, .coeur .cplein .cplein {
@@ -347,6 +347,7 @@ Choix du menu*/
   justify-content: center;
   align-items: center;
   font-size: 1.6rem;
+  z-index: 1;
 }
 
 .menus__grille-categories {
