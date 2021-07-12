@@ -20,7 +20,7 @@
 
 }
 
-@mixin box-shadow ($size1:5px,$size2:5px,$size3:10px,$couleur-shadow:darken($couleurFond1,15%)) {
+@mixin box-shadow ($size1:5px,$size2:5px,$size3:10px,$couleur-shadow:darken($couleurFond1,25%)) {
   box-shadow: $size1 $size2 $size3 $couleur-shadow;
 }
 

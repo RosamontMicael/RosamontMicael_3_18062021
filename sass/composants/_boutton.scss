@@ -21,8 +21,8 @@ Choix du menu*/
     margin: auto;
         
     background-color:$couleurFond1;/*$fond-tertiaire;*/
-    overflow:hidden;
-    cursor:pointer;    
+    
+    cursor:pointer;   overflow: hidden; 
 
     &:hover {
         @include box-shadow;
@@ -30,34 +30,50 @@ Choix du menu*/
     }
 
 
-    &__description {
+    &__description {width: 100%;
+       
         white-space: nowrap;
+        
         text-overflow:ellipsis;
         
-        padding:10px 0px 10px 10px;
-        width: 70%;
+        padding: 10px 0px 15px 10px;
+        
         
     }
 
     &__nom {
         padding-bottom: 5px;
         flex-wrap: nowrap;
+      
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow:ellipsis;
+    }
+    &__soustitre { 
+        text-overflow:clip ;
+        width: 100%;
+        transition : width 400ms 20ms;    
+        transition : text-overflow 1000ms 400ms linear; } 
+    &:hover .btn-menus__soustitre {
+        white-space: nowrap;width: 90%;
+       overflow: hidden;
+        text-overflow:ellipsis;
     }
     
-    &__prix {
+    &__prix { margin-right: 10px;
         display: flex;
         justify-content: center;
         align-items: flex-end;
         font-weight: bold;
-        width: 10%;height:100%;        
+        width: 10%;height:100%; 
 
         padding-bottom: 10px;
-        transform: translateX(150%);
-        transition: 1000ms ease-out;
+        transform: translateX(100%);
+        transition: 300ms 90ms ease-out;
     }
 
-    &:hover > .btn-menus__prix {margin-left: 10px;
-         transform: translateX(-50%);
+    &:hover > .btn-menus__prix {
+         transform: translateX(0%) scaleX(1.2);         
     }
     
 
@@ -66,14 +82,14 @@ Choix du menu*/
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 20%;
-        height:100%;    
+        width: 19%;
+        height:100%;   
 
         transform: translateX(100%);
-        transition:1000ms ease-out ;
+        transition:500ms ease-out ;
         i {
             transform: rotate(-180deg);
-            transition: 500ms 300ms ease-out;
+            transition: 200ms 200ms ease-out;
             
         }
     }
@@ -114,7 +130,7 @@ Choix du menu*/
             top: 0px;
             transform:scale(0);
             opacity: 0.6;
-            transition: 2000ms ease-in;
+            transition: 1000ms ease-in-out;
             transform-origin: bottom;
             z-index: -1;    
     }
