@@ -79,14 +79,15 @@
 @mixin categorie-type {
 display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(5,auto);
+    grid-template-rows: 40px 10px 70px 70px 70px auto;
     row-gap: 10px;
     grid-template-areas:
     'titre'
     'sep'
     'bouton1'
     'bouton2'
-    'bouton3';
+    'bouton3'
+    'bouton4';
     
     &__titre {
         grid-area: titre;
@@ -118,4 +119,11 @@ display: grid;
         grid-area: bouton3;
         animation: apparition 1000ms ease-out 300ms ;
     }
+
+    &__bouton-choix4 {
+        grid-area: bouton4;
+        animation: apparition 1000ms ease-out 300ms ;
+    }
+
+
 }

@@ -150,7 +150,7 @@ Choix du menu*/
 }
 
 .btn-menus__description {
-  width: 100%;
+  width: 250px;
   white-space: nowrap;
   text-overflow: ellipsis;
   padding: 10px 0px 15px 10px;
@@ -159,9 +159,6 @@ Choix du menu*/
 .btn-menus__nom {
   padding-bottom: 5px;
   flex-wrap: nowrap;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .btn-menus__soustitre {
@@ -179,13 +176,13 @@ Choix du menu*/
 }
 
 .btn-menus__prix {
-  margin-right: 10px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
   font-weight: bold;
-  width: 10%;
+  width: 50px;
   height: 100%;
+  margin-right: 10px;
   padding-bottom: 10px;
   transform: translateX(100%);
   transition: 300ms 90ms ease-out;
@@ -200,9 +197,9 @@ Choix du menu*/
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 19%;
+  width: 50px;
   height: 100%;
-  transform: translateX(100%);
+  transform: translateX(101%);
   transition: 500ms ease-out;
 }
 
@@ -401,9 +398,9 @@ Choix du menu*/
 .cat-entree {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(5, auto);
+  grid-template-rows: 40px 10px 70px 70px 70px auto;
   row-gap: 10px;
-  grid-template-areas: 'titre' 'sep' 'bouton1' 'bouton2' 'bouton3';
+  grid-template-areas: 'titre' 'sep' 'bouton1' 'bouton2' 'bouton3' 'bouton4';
 }
 
 .cat-entree__titre {
@@ -435,12 +432,17 @@ Choix du menu*/
   animation: apparition 1000ms ease-out 300ms;
 }
 
+.cat-entree__bouton-choix4 {
+  grid-area: bouton4;
+  animation: apparition 1000ms ease-out 300ms;
+}
+
 .cat-plat {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(5, auto);
+  grid-template-rows: 40px 10px 70px 70px 70px auto;
   row-gap: 10px;
-  grid-template-areas: 'titre' 'sep' 'bouton1' 'bouton2' 'bouton3';
+  grid-template-areas: 'titre' 'sep' 'bouton1' 'bouton2' 'bouton3' 'bouton4';
 }
 
 .cat-plat__titre {
@@ -472,12 +474,17 @@ Choix du menu*/
   animation: apparition 1000ms ease-out 300ms;
 }
 
+.cat-plat__bouton-choix4 {
+  grid-area: bouton4;
+  animation: apparition 1000ms ease-out 300ms;
+}
+
 .cat-dessert {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(5, auto);
+  grid-template-rows: 40px 10px 70px 70px 70px auto;
   row-gap: 10px;
-  grid-template-areas: 'titre' 'sep' 'bouton1' 'bouton2' 'bouton3';
+  grid-template-areas: 'titre' 'sep' 'bouton1' 'bouton2' 'bouton3' 'bouton4';
 }
 
 .cat-dessert__titre {
@@ -506,6 +513,11 @@ Choix du menu*/
 
 .cat-dessert__bouton-choix3 {
   grid-area: bouton3;
+  animation: apparition 1000ms ease-out 300ms;
+}
+
+.cat-dessert__bouton-choix4 {
+  grid-area: bouton4;
   animation: apparition 1000ms ease-out 300ms;
 }
 

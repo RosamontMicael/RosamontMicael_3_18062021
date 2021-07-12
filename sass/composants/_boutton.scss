@@ -30,7 +30,7 @@ Choix du menu*/
     }
 
 
-    &__description {width: 100%;
+    &__description {width: 250px;
        
         white-space: nowrap;
         
@@ -45,27 +45,27 @@ Choix du menu*/
         padding-bottom: 5px;
         flex-wrap: nowrap;
       
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow:ellipsis;
+       
     }
     &__soustitre { 
         text-overflow:clip ;
         width: 100%;
         transition : width 400ms 20ms;    
-        transition : text-overflow 1000ms 400ms linear; } 
+        transition : text-overflow 1000ms 400ms linear;
+    } 
+    
     &:hover .btn-menus__soustitre {
         white-space: nowrap;width: 90%;
        overflow: hidden;
         text-overflow:ellipsis;
     }
     
-    &__prix { margin-right: 10px;
+    &__prix { 
         display: flex;
         justify-content: center;
         align-items: flex-end;
         font-weight: bold;
-        width: 10%;height:100%; 
+        width: 50px;height:100%; margin-right: 10px;
 
         padding-bottom: 10px;
         transform: translateX(100%);
@@ -82,10 +82,10 @@ Choix du menu*/
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 19%;
+        width: 50px;
         height:100%;   
 
-        transform: translateX(100%);
+        transform: translateX(101%);
         transition:500ms ease-out ;
         i {
             transform: rotate(-180deg);
