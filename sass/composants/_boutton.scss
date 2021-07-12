@@ -30,7 +30,7 @@ Choix du menu*/
     }
 
 
-    &__description {width: 250px;
+    &__description {width: 290px;
        
         white-space: nowrap;
         
@@ -47,17 +47,18 @@ Choix du menu*/
       
        
     }
-    &__soustitre { 
-        text-overflow:clip ;
-        width: 100%;
-        transition : width 400ms 20ms;    
-        transition : text-overflow 1000ms 400ms linear;
+    &__soustitre { white-space: nowrap;
+        overflow: hidden;
+        text-overflow:ellipsis ;
+        width: 290px;
+        transition : width 200ms 100ms ;    
+        
     } 
     
-    &:hover .btn-menus__soustitre {
-        white-space: nowrap;width: 90%;
-       overflow: hidden;
-        text-overflow:ellipsis;
+    .btn-menus__description {
+        &:hover > .btn-menus__soustitre {
+       width: 250px;
+    }
     }
     
     &__prix { 

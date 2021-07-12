@@ -150,7 +150,7 @@ Choix du menu*/
 }
 
 .btn-menus__description {
-  width: 250px;
+  width: 290px;
   white-space: nowrap;
   text-overflow: ellipsis;
   padding: 10px 0px 15px 10px;
@@ -162,17 +162,15 @@ Choix du menu*/
 }
 
 .btn-menus__soustitre {
-  text-overflow: clip;
-  width: 100%;
-  transition: width 400ms 20ms;
-  transition: text-overflow 1000ms 400ms linear;
-}
-
-.btn-menus:hover .btn-menus__soustitre {
   white-space: nowrap;
-  width: 90%;
   overflow: hidden;
   text-overflow: ellipsis;
+  width: 290px;
+  transition: width 200ms 100ms;
+}
+
+.btn-menus .btn-menus__description:hover > .btn-menus__soustitre {
+  width: 250px;
 }
 
 .btn-menus__prix {
