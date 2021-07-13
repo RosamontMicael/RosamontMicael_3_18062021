@@ -3,7 +3,7 @@
 
     background:linear-gradient(to bottom,darken( $couleurFond1,20%) 0%,darken($couleurFond1,10%) 10%);
         &__conteneur {           
-            @include centrer (0, auto);
+            @include centrer (0, 0px);
             width: 100%;
             height: 50px;
             
