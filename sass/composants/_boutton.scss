@@ -104,35 +104,3 @@ Choix du menu*/
     
 }
 
-/*Parametres par defauts*/
-.coeur {    
-    .cvide,.cplein { 
-        color:$couleurFond2;
-        display: block;
-        font-size: 1.5rem;
-        .cplein {
-            color:$couleur-secondaire;
-            display: block;
-        }
-    }
-
-    .cvide {
-            position:relative;
-
-            &:hover > .cplein {
-                transform: scale(1);
-                    
-      	    }
-            
-    }
-
-    .cplein {
-            position: absolute;
-            top: 0px;
-            transform:scale(0);
-            opacity: 0.6;
-            transition: 1000ms ease-in-out;
-            transform-origin: bottom;
-            z-index: -1;    
-    }
-}

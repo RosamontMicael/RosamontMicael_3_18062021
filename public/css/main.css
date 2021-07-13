@@ -156,6 +156,36 @@ a {
   }
 }
 
+/*Parametres par defauts*/
+.coeur .cvide, .coeur .cplein {
+  color: black;
+  display: block;
+  font-size: 1.5rem;
+}
+
+.coeur .cvide .cplein, .coeur .cplein .cplein {
+  color: #FF79DA;
+  display: block;
+}
+
+.coeur .cvide {
+  position: relative;
+}
+
+.coeur .cvide:hover > .cplein {
+  transform: scale(1);
+}
+
+.coeur .cplein {
+  position: absolute;
+  top: 0px;
+  transform: scale(0);
+  opacity: 0.6;
+  transition: 1000ms ease-in-out;
+  transform-origin: bottom;
+  z-index: -1;
+}
+
 /*===Bouttons===*/
 /*Boutton de base pour:
 Choix du restaurant
@@ -289,36 +319,6 @@ Choix du menu*/
 
 .btn-menus:hover > .btn-menus__cadreicone-check i {
   transform: rotate(0deg);
-}
-
-/*Parametres par defauts*/
-.coeur .cvide, .coeur .cplein {
-  color: black;
-  display: block;
-  font-size: 1.5rem;
-}
-
-.coeur .cvide .cplein, .coeur .cplein .cplein {
-  color: #FF79DA;
-  display: block;
-}
-
-.coeur .cvide {
-  position: relative;
-}
-
-.coeur .cvide:hover > .cplein {
-  transform: scale(1);
-}
-
-.coeur .cplein {
-  position: absolute;
-  top: 0px;
-  transform: scale(0);
-  opacity: 0.6;
-  transition: 1000ms ease-in-out;
-  transform-origin: bottom;
-  z-index: -1;
 }
 
 /*---------------------------------*/
