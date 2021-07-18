@@ -362,7 +362,7 @@ Choix du menu*/
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 20px;
+  padding: 10px 20px;
   justify-content: start;
 }
 
@@ -379,11 +379,13 @@ Choix du menu*/
 .header__logo {
   position: relative;
   left: 50%;
+  font-family: 'Shrikhand','Roboto', sans-serif;
+  font-size: 2rem;
   transform: translateX(-50%);
 }
 
-.header__logo img {
-  height: 30px;
+.header__logo p {
+  height: 40px;
 }
 
 .footer {

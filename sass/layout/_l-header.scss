@@ -1,5 +1,5 @@
 .header {
-    @include centrer  ;
+    @include centrer(10px,20px)  ;
     justify-content: start;
     
     &__icone {
@@ -16,10 +16,12 @@
     &__logo {
         position: relative;
         left: 50%;
+        font-family: 'Shrikhand','Roboto', sans-serif;
+        font-size:2rem;        
         
         transform: translateX(-50%);        
-            img {
-                height:30px;
+            p {
+                height:40px;
            }
     }
 
