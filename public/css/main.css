@@ -184,31 +184,28 @@ a {
 }
 
 /*Parametres par defauts*/
-.coeur .cvide, .coeur .cplein {
-  color: black;
-  display: block;
-  font-size: 1.5rem;
-}
-
-.coeur .cvide .cplein, .coeur .cplein .cplein {
-  color: #C265DB;
-  display: block;
-}
-
-.coeur .cvide {
+.coeur__vide {
   position: relative;
-  transition: 1000ms ease-in-out;
+  display: block;
+  font-size: 1.6rem;
+  color: black;
+  transition: 1000ms  ease-in-out;
 }
 
-.coeur .cvide:hover {
+.coeur__vide:hover {
   color: transparent;
 }
 
-.coeur .cvide:hover > .cplein {
+.coeur__vide:hover > .coeur__plein {
   transform: scale(1);
 }
 
-.coeur .cplein {
+.coeur__plein {
+  font-weight: 900;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  -webkit-text-fill-color: transparent;
+  display: block;
   position: absolute;
   top: 0px;
   transform: scale(0);
@@ -891,13 +888,11 @@ Choix du menu*/
   padding: 15px 40px;
 }
 
-.card-prev__cadreiconecoeur .cvide {
-  color: black;
-  font-size: 1.5rem;
+.card-prev__cadreiconecoeur .coeur__vide {
+  font-size: 1.6rem;
 }
 
-.card-prev__cadreiconecoeur .cvide .cplein {
-  color: #FF79DA;
-  font-size: 1.5rem;
+.card-prev__cadreiconecoeur .coeur__vide .coeur__plein {
+  font-size: 1.6rem;
 }
 /*# sourceMappingURL=main.css.map */

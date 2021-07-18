@@ -254,12 +254,12 @@
     &__cadreiconecoeur {
         padding: 15px 40px;                
         
-        .cvide {
-            color:$couleurFond2;           
-            font-size: 1.5rem;
-            .cplein {
-                color:$couleur-secondaire;            
-                font-size: 1.5rem;
+        .coeur__vide {
+                     
+            font-size:$coeur-size-card-prev;  
+            .coeur__plein {
+                font-size:$coeur-size-card-prev;        
+                
             }
 
         }            

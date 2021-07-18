@@ -1,34 +1,38 @@
 /*Parametres par defauts*/
 .coeur {    
-    .cvide,.cplein { 
-        color:$couleurFond2;
+    &__vide { 
+        position:relative;        
+        
         display: block;
-        font-size: 1.5rem;
-        .cplein {
-            color:/*$couleur-secondaire;*/ #C265DB;
-            display: block;
-        }
-    }
+        font-size:$coeur-size-default;
+        color:$couleurFond2;
+        transition: 1000ms  ease-in-out;
 
-    .cvide {
-            position:relative;
-            transition: 1000ms ease-in-out;
-            &:hover {
+        &:hover {
                 color:transparent;
-                & > .cplein {
-                transform: scale(1);
-                    
-      	    }
-            }
+                & > .coeur__plein {
+                transform: scale(1);                   
+      	        }
+        }
+        
     }
 
-    .cplein {
+    &__plein {
+            font-weight: 900;
+            -webkit-background-clip: text;
+            background-image: linear-gradient($couleur-primaire,$couleur-secondaire);
+            -webkit-text-fill-color: transparent;
+            
+            display: block;
             position: absolute;
             top: 0px;
             transform:scale(0);
             opacity: 0.6;
             transition: 1000ms ease-in-out;
             transform-origin: bottom;
-            z-index: -1;    
+            z-index: -1; 
+           
+            
     }
+    
 }
