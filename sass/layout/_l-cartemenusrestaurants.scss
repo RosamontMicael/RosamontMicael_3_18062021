@@ -1,4 +1,7 @@
 .carte {
+    @media screen and ( max-width:1000px) {
+    height: $hauteur-carte-mobile - $decallage-carte-mobile;
+    }
     
     img {
         width:100%;
@@ -12,7 +15,7 @@
 
     &__menus {
         position: relative;
-        top:-40px;
+        top:$decallage-carte-mobile*(-1);
         max-width:1110px;
 
         border-radius: 40px 40px 0 0;
@@ -22,14 +25,13 @@
         padding: 40px 15px;
 
         @media screen and ( min-width:1000px) {
-           top:-100px;
+           top:$decallage-carte-desktop*(-1);
+           border-radius: 40px 40px 40px 40px;
         }
         
     }
 
-    @media screen and ( min-width:1000px) {
-
-    }
+    
 }
 
 .menus {

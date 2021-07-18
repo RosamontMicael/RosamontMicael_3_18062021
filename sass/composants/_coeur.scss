@@ -5,19 +5,21 @@
         display: block;
         font-size: 1.5rem;
         .cplein {
-            color:$couleur-secondaire;
+            color:/*$couleur-secondaire;*/ #C265DB;
             display: block;
         }
     }
 
     .cvide {
             position:relative;
-
-            &:hover > .cplein {
+            transition: 1000ms ease-in-out;
+            &:hover {
+                color:transparent;
+                & > .cplein {
                 transform: scale(1);
                     
       	    }
-            
+            }
     }
 
     .cplein {
