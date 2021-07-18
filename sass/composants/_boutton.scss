@@ -21,11 +21,12 @@ Choix du menu*/
     margin: auto;
         
     background-color:$couleurFond1;/*$fond-tertiaire;*/
-    
+    @include box-shadow;
+
     cursor:pointer;   overflow: hidden; 
 
     &:hover {
-        @include box-shadow;
+        @include box-shadow (5px,5px,10px,$couleurFond2-actif);
         @include zoom;
     }
 

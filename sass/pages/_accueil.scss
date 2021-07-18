@@ -124,7 +124,8 @@
 
             &:hover {
                 background-color:lighten($couleur-primaire ,35%);
-                
+                @include box-shadow (5px,5px,10px,$couleurFond2-actif);
+
                 @include zoom;
                 .cadreicone {
                     color:$couleur-primaire;
@@ -206,10 +207,10 @@
     border-radius: 15px;
 
     background-color: $couleurFond1;   
-    
+    @include box-shadow;
 
     &:hover {
-        @include box-shadow;
+        @include box-shadow (5px,5px,10px,$couleurFond2-actif);
         @include zoom;
     }
 

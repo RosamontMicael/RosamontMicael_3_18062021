@@ -80,7 +80,7 @@ a {
 /*---------------------------------*/
 /*----COMPOSANTS-----*/
 /*---------------------------------*/
-@keyframes cat {
+@keyframes loader-apparition {
   0% {
     z-index: 3;
   }
@@ -102,7 +102,7 @@ a {
   justify-content: center;
   align-items: center;
   z-index: -1;
-  animation: cat 3800ms;
+  animation: loader-apparition 3800ms;
 }
 
 .loader-conteneur::after {
@@ -235,6 +235,7 @@ Commandez*/
   border-radius: 30px;
   margin: 20px 0px;
   background: radial-gradient(ellipse at left top, #FF79DA 15%, #9356DC 100%);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
   text-align: center;
   color: white;
   cursor: pointer;
@@ -245,7 +246,7 @@ Commandez*/
 }
 
 .btn:hover {
-  box-shadow: 5px 5px 10px #bfbfbf;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.45);
   transform: scale(1.02);
   transition: transform 800ms;
 }
@@ -278,12 +279,13 @@ Choix du menu*/
   margin: auto;
   background-color: white;
   /*$fond-tertiaire;*/
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
   cursor: pointer;
   overflow: hidden;
 }
 
 .btn-menus:hover {
-  box-shadow: 5px 5px 10px #bfbfbf;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.45);
   transform: scale(1.02);
   transition: transform 800ms;
 }
@@ -758,7 +760,7 @@ Choix du menu*/
   width: 300px;
   margin: 15px 0px;
   border-radius: 20px;
-  box-shadow: 5px 5px 10px #bfbfbf;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
   background-color: #f2f2f2;
   padding: 20px 0px;
   cursor: pointer;
@@ -766,6 +768,7 @@ Choix du menu*/
 
 .fonctionnement__etape:hover {
   background-color: #f2eafb;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.45);
   transform: scale(1.02);
   transition: transform 800ms;
 }
@@ -838,10 +841,11 @@ Choix du menu*/
   cursor: pointer;
   border-radius: 15px;
   background-color: white;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
 }
 
 .card-prev:hover {
-  box-shadow: 5px 5px 10px #bfbfbf;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.45);
   transform: scale(1.02);
   transition: transform 800ms;
 }

@@ -4,7 +4,11 @@ $couleur-primaire:#9356DC;
 $couleur-secondaire:#FF79DA;
 $couleur-tertiaire:#99E2D0;
 $couleurFond1:rgb(255, 255, 255);
-$couleurFond2:black;
+$couleurFond2:rgba(0,0,0,1);
+
+$couleurFond2-actif:rgba(0,0,0,0.45);
+$couleurFond2-inactif:rgba(0,0,0,0.25);
+
 $couleurTexte1:white;
 $couleurTexte2:black;
 
