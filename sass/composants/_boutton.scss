@@ -20,7 +20,7 @@ Choix du menu*/
     border-radius: 15px;
     margin: auto;
         
-    background-color:$couleurFond1;/*$fond-tertiaire;*/
+    background-color:$couleurFond1;
     @include box-shadow;
 
     cursor:pointer;   overflow: hidden; 
