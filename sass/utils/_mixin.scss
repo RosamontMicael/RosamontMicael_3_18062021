@@ -80,7 +80,7 @@
 @mixin categorie-type {
 display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 40px 10px 70px 70px 70px auto;
+    grid-template-rows: 50px 10px 70px 70px 70px auto;
     row-gap: 10px;
     grid-template-areas:
     'titre'
@@ -94,6 +94,7 @@ display: grid;
         grid-area: titre;
 
         margin-top: 10px;
+        padding-top: 20px;
 
         text-transform:uppercase;
         font-size: 1.1rem;

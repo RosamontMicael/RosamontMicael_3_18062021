@@ -38,7 +38,7 @@
     display: grid;
     grid-template-columns: 1fr 20%;
     grid-template-rows: repeat(3,auto);
-    row-gap: 40px;  
+    row-gap: 10px;
     grid-template-areas: 
     'titre coeur' 
     'grillcat grillcat'
@@ -95,6 +95,7 @@
     &__conteneur {
         grid-area: conteneur-btn;
         @include centrer(0px, 0px);
+        margin-top: 10px;
     } 
 
 }
@@ -105,6 +106,8 @@
 
 .cat-plat {
     @include categorie-type;
+    
+    
 }
 
 .cat-dessert {
