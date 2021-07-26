@@ -180,7 +180,7 @@ a {
   display: block;
   font-size: 1.6rem;
   color: black;
-  transition: 1000ms  ease-in-out;
+  transition: 1800ms  ease-in-out;
 }
 
 .coeur__vide:hover {
