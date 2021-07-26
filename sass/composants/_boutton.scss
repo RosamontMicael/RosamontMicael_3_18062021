@@ -28,10 +28,13 @@ Choix du menu*/
     &:hover {
         @include box-shadow (5px,5px,10px,$couleurFond2-actif);
         @include zoom;
+        
     }
 
 
-    &__description {width: 290px;
+    &__description {
+        
+        width: 290px;
        
         white-space: nowrap;
         
@@ -44,21 +47,31 @@ Choix du menu*/
 
     &__nom {
         padding-bottom: 5px;
-        flex-wrap: nowrap;
+       white-space: nowrap;
+        
+        text-overflow:ellipsis;
       
        
     }
-    &__soustitre { white-space: nowrap;
+
+    &:hover > .btn-menus__description {
+    .btn-menus__nom {
+       width: 250px;
+    }
+    }
+
+    &__soustitre {
+        white-space: nowrap;
         overflow: hidden;
         text-overflow:ellipsis ;
         width: 290px;
         transition : width 200ms 100ms ;    
         
     } 
-    
-    .btn-menus__description {
-        &:hover > .btn-menus__soustitre {
-       width: 250px;
+        
+    &:hover > .btn-menus__description {
+    .btn-menus__soustitre {
+       width: 245px;
     }
     }
     

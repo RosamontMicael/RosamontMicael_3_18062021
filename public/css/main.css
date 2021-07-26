@@ -297,7 +297,12 @@ Choix du menu*/
 
 .btn-menus__nom {
   padding-bottom: 5px;
-  flex-wrap: nowrap;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.btn-menus:hover > .btn-menus__description .btn-menus__nom {
+  width: 250px;
 }
 
 .btn-menus__soustitre {
@@ -308,8 +313,8 @@ Choix du menu*/
   transition: width 200ms 100ms;
 }
 
-.btn-menus .btn-menus__description:hover > .btn-menus__soustitre {
-  width: 250px;
+.btn-menus:hover > .btn-menus__description .btn-menus__soustitre {
+  width: 245px;
 }
 
 .btn-menus__prix {
