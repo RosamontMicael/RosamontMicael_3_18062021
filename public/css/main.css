@@ -180,7 +180,7 @@ a {
   display: block;
   font-size: 1.6rem;
   color: black;
-  transition: 1800ms  ease-in-out;
+  transition: 1800ms ease-in-out;
 }
 
 .coeur__vide:hover {
@@ -195,7 +195,7 @@ a {
   font-weight: 900;
   background-clip: text;
   -webkit-background-clip: text;
-  background-image: linear-gradient(#9356DC, #FF79DA);
+  background-image: linear-gradient(#6023a9, #ff13be);
   -webkit-text-fill-color: transparent;
   display: block;
   position: absolute;
@@ -336,6 +336,8 @@ Choix du menu*/
 }
 
 .btn-menus__cadreicone-check i {
+  color: white;
+  font-size: 1.2rem;
   transform: rotate(-180deg);
   transition: 200ms 200ms ease-out;
 }
@@ -669,7 +671,7 @@ Choix du menu*/
 }
 
 .localisation__cadresaisie input {
-  width: 130px;
+  width: 140px;
   height: 40px;
   border: none;
   padding-left: 10px;

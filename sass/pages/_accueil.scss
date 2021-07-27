@@ -1,268 +1,251 @@
 .localisation {
-    width:100%;
+  width: 100%;
 
-    background:linear-gradient(to bottom,darken( $couleurFond1,20%) 0%,darken($couleurFond1,10%) 10%);
-        &__conteneur {           
-            @include centrer (0, 0px);
-            width: 100%;
-            height: 50px;
-            
-        } 
+  background: linear-gradient(
+    to bottom,
+    darken($couleurFond1, 20%) 0%,
+    darken($couleurFond1, 10%) 10%
+  );
+  &__conteneur {
+    @include centrer(0, 0px);
+    width: 100%;
+    height: 50px;
+  }
 
-        &__cadreicone {          
-            padding-right:5px;
+  &__cadreicone {
+    padding-right: 5px;
 
-            color:darken( $couleurTexte1,90%);
-            font-size:1rem;
-            
-        }
+    color: darken($couleurTexte1, 90%);
+    font-size: 1rem;
+  }
 
-        &__cadresaisie {
-            width: auto;
-            height: auto;
-          
+  &__cadresaisie {
+    width: auto;
+    height: auto;
 
-            input {
-            
-            width:130px;
-            height:40px;
-            
-            border:none;
-            padding-left:10px;
-                        
-            background-color: darken($couleurFond1,10%);
+    input {
+      width: 140px;
+      height: 40px;
 
-            color:black; 
-            }
+      border: none;
+      padding-left: 10px;
 
-            input::placeholder {            
-            color:darken( $couleurTexte1,70%);
-            font-weight: 600;
-            font-size:1rem;
-                    
-            }
-        }
+      background-color: darken($couleurFond1, 10%);
+
+      color: black;
+    }
+
+    input::placeholder {
+      color: darken($couleurTexte1, 70%);
+      font-weight: 600;
+      font-size: 1rem;
+    }
+  }
 }
 
-
 .vitrine {
-    @include centrer(30px,30px);
+  @include centrer(30px, 30px);
+  flex-direction: column;
+  height: auto;
+  background-color: darken($couleurFond1, 5%);
+
+  font-size: 1rem;
+
+  &__titre {
+    @include centrer(15px, 0px);
     flex-direction: column;
-    height:auto;
-    background-color:darken( $couleurFond1,5%);
-    
-    font-size:1rem;  
-    
-    &__titre {
-        @include centrer(15px, 0px);
-        flex-direction: column;
 
-        text-align: center;
-        font-weight: bold;  
-    }
+    text-align: center;
+    font-weight: bold;
+  }
 
-    &__message {    
-        @include centrer(15px, 0px);
-        flex-direction: column;
+  &__message {
+    @include centrer(15px, 0px);
+    flex-direction: column;
 
-        text-align: center; 
-        color:darken( $couleurTexte1,50%) 
-    }
-    &__conteneur {
-        @include centrer(0px, 0px);
-        flex-direction: column; 
-        width: 100%;
-        
-    }
-       
-    
+    text-align: center;
+    color: darken($couleurTexte1, 50%);
+  }
+  &__conteneur {
+    @include centrer(0px, 0px);
+    flex-direction: column;
+    width: 100%;
+  }
 }
 
 .fonctionnement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 50px 20px;
+
+  font-size: 1rem;
+
+  @media screen and (min-width: 1100px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  &__titre {
+    align-self: start;
+
+    margin-bottom: 10px;
+
+    @media screen and (min-width: 376px) {
+      display: block;
+      width: 100%;
+
+      text-align: center;
+    }
+  }
+
+  &__etape {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    width: 300px;
 
-    padding: 50px 20px;
+    margin: 15px 0px;
+    border-radius: 20px;
+    @include box-shadow;
 
-    font-size: 1rem;
-    
-    
+    background-color: darken($couleurFond1, 5%);
+    padding: 20px 0px;
+    cursor: pointer;
 
-    @media screen and (min-width:1100px) {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
+    &:hover {
+      background-color: lighten($couleur-primaire, 35%);
+      @include box-shadow(5px, 5px, 10px, $couleurFond2-actif);
+
+      @include zoom;
+      .cadreicone {
+        color: $couleur-primaire;
+      }
     }
+  }
 
-    &__titre {
-        align-self: start;
+  .cadrenumero {
+    width: 24px;
+    line-height: 24px;
 
-        margin-bottom:10px;
-        
+    border-radius: 12px;
+    margin-right: 10px;
 
-        @media screen and (min-width:376px) {
-        display: block;
-        width: 100%;
-        
-        text-align: center;
-        }
-    }
+    background-color: $couleur-primaire;
 
-    &__etape {
-        display: flex;
-        align-items: center;
-        width:300px;
-        
-        margin:15px 0px; 
-        border-radius: 20px;
-        @include box-shadow;
+    font-size: 0.9rem;
+    text-align: center;
+    color: $couleurTexte1;
+    transform: translateX(-13px);
+  }
 
-        background-color:darken( $couleurFond1,5%);
-        padding:20px 0px;        
-        cursor:pointer;
+  .cadreicone {
+    margin-right: 20px;
 
-            &:hover {
-                background-color:lighten($couleur-primaire ,35%);
-                @include box-shadow (5px,5px,10px,$couleurFond2-actif);
+    color: darken($couleurTexte1, 50%);
+    font-size: 1.4rem;
+    text-align: center;
+  }
 
-                @include zoom;
-                .cadreicone {
-                    color:$couleur-primaire;
-                }
-            }
-    }
-
-    .cadrenumero {        
-        width:24px;          
-        line-height:24px;
-
-        border-radius: 12px;
-        margin-right:10px;
-        
-        background-color: $couleur-primaire;
-
-        font-size: 0.9rem;
-        text-align: center;
-        color:$couleurTexte1;
-        transform:translateX(-13px);
-        
-    }
-
-    .cadreicone {
-        margin-right:20px;
-        
-        color:darken( $couleurTexte1,50%);
-        font-size: 1.4rem;                      
-        text-align: center;        
-        
-    }
-
-    .cadreconsigne {
-         font-size: 1.2rem; 
-         font-weight: bold;        
-    }
+  .cadreconsigne {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
 }
 
 .restaurant {
-    background-color:darken( $couleurFond1,5%);
-    padding: 60px 20px;
+  background-color: darken($couleurFond1, 5%);
+  padding: 60px 20px;
 
-    font-size: 1rem;
-    
-    &__titre {
-        padding-bottom: 30px;
+  font-size: 1rem;
 
-        @media screen and (min-width:376px) {
-        display: block;
-        width: 100%;
+  &__titre {
+    padding-bottom: 30px;
 
-        text-align: center;
-        }
+    @media screen and (min-width: 376px) {
+      display: block;
+      width: 100%;
+
+      text-align: center;
     }
+  }
 
-    &__grille {
-        display:grid;
-        grid-template-rows: repeat(4,auto);
-        grid-row-gap: 20px;
+  &__grille {
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    grid-row-gap: 20px;
 
-        @media screen and (min-width:771px) {
-        grid-template-columns: repeat(2,auto);
-        grid-column-gap: 20px;
-        }
-
+    @media screen and (min-width: 771px) {
+      grid-template-columns: repeat(2, auto);
+      grid-column-gap: 20px;
     }
-    
+  }
 }
 
+.card-prev {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  cursor: pointer;
 
-.card-prev {        
-    display: flex;
-    overflow: hidden;
-    position: relative;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    cursor:pointer;
+  border-radius: 15px;
 
-    border-radius: 15px;
+  background-color: $couleurFond1;
+  @include box-shadow;
 
-    background-color: $couleurFond1;   
-    @include box-shadow;
+  &:hover {
+    @include box-shadow(5px, 5px, 10px, $couleurFond2-actif);
+    @include zoom;
+  }
 
-    &:hover {
-        @include box-shadow (5px,5px,10px,$couleurFond2-actif);
-        @include zoom;
+  &__nouveau {
+    display: block;
+    width: 90px;
+    line-height: 25px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    background-color: $couleur-tertiaire;
+
+    color: darken($couleur-tertiaire, 40%);
+    font-weight: bold;
+    text-align: center;
+
+    &.card-prev__nouveau--invisible {
+      opacity: 0; /* ou display:none*/
     }
+  }
 
-    &__nouveau {
-        display:block;
-        width: 90px;
-        line-height: 25px;
-        position:absolute;
-        top:10px;
-        right:10px;
-        
-        background-color: $couleur-tertiaire;
+  &__photo {
+    width: 100%;
+  }
+  img {
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
 
-        color:darken($couleur-tertiaire,40%);
-        font-weight: bold;
-        text-align: center;        
-                
-            &.card-prev__nouveau--invisible {
-                opacity:0; /* ou display:none*/
-            }
+    border-radius: 15px 15px 0px 0px;
+  }
+
+  &__description {
+    padding: 15px 15px;
+
+    color: $couleurTexte2;
+    font-size: 1rem;
+  }
+
+  &__cadreiconecoeur {
+    padding: 15px 40px;
+
+    .coeur__vide {
+      font-size: $coeur-size-card-prev;
+      .coeur__plein {
+        font-size: $coeur-size-card-prev;
+      }
     }
-        
-    &__photo {
-        width: 100%;
-    }
-    img {
-        width: 100%;
-        height: 175px;
-        object-fit: cover;
-        
-        border-radius: 15px 15px 0px 0px;
-    }
-
-    &__description {            
-        padding: 15px 15px;
-
-        color:$couleurTexte2;
-        font-size: 1rem;
-    }
-
-    &__cadreiconecoeur {
-        padding: 15px 40px;                
-        
-        .coeur__vide {
-                     
-            font-size:$coeur-size-card-prev;  
-            .coeur__plein {
-                font-size:$coeur-size-card-prev;        
-                
-            }
-
-        }            
-             
-    }
+  }
 }

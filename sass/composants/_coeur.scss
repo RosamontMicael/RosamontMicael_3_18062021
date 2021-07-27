@@ -1,39 +1,38 @@
 /*Parametres par defauts*/
-.coeur {    
-    &__vide { 
-        position:relative;        
-        
-        display: block;
-        font-size:$coeur-size-default;
-        color:$couleurFond2;
-        transition: 1800ms  ease-in-out;
+.coeur {
+  &__vide {
+    position: relative;
 
-        &:hover {
-                color:transparent;
-                & > .coeur__plein {
-                transform: scale(1);                   
-      	        }
-        }
-        
-    }
+    display: block;
+    font-size: $coeur-size-default;
+    color: $couleurFond2;
+    transition: 1800ms ease-in-out;
 
-    &__plein {
-            font-weight: 900;
-            background-clip: text;
-            -webkit-background-clip: text;
-            background-image: linear-gradient($couleur-primaire,$couleur-secondaire);
-            -webkit-text-fill-color: transparent;
-            
-            display: block;
-            position: absolute;
-            top: 0px;
-            transform:scale(0);
-            opacity: 0.6;
-            transition: 1000ms ease-in-out;
-            transform-origin: bottom;
-            z-index: -1; 
-           
-            
+    &:hover {
+      color: transparent;
+      & > .coeur__plein {
+        transform: scale(1);
+      }
     }
-    
+  }
+
+  &__plein {
+    font-weight: 900;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(
+      darken($couleur-primaire, 20%),
+      darken($couleur-secondaire, 20%)
+    );
+    -webkit-text-fill-color: transparent;
+
+    display: block;
+    position: absolute;
+    top: 0px;
+    transform: scale(0);
+    opacity: 0.6;
+    transition: 1000ms ease-in-out;
+    transform-origin: bottom;
+    z-index: -1;
+  }
 }

@@ -103,6 +103,8 @@ Choix du menu*/
         transform: translateX(101%);
         transition:500ms ease-out ;
         i {
+            color:$couleurFond1 ;
+            font-size: 1.2rem;
             transform: rotate(-180deg);
             transition: 200ms 200ms ease-out;
             
