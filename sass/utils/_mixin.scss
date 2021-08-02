@@ -109,22 +109,22 @@ display: grid;
 
     &__bouton-choix1 {        
         grid-area: bouton1;
-        animation: apparition 1000ms ease-out  ;
+        /*animation: apparition 1000ms ease-out  ;*/
     }
 
     &__bouton-choix2 {        
         grid-area: bouton2;
-        animation: apparition 1000ms ease-out 150ms ;
+       /* animation: apparition 1000ms ease-out 150ms ;*/
     }
 
     &__bouton-choix3 {
         grid-area: bouton3;
-        animation: apparition 1000ms ease-out 300ms ;
+       /* animation: apparition 1000ms ease-out 300ms ;*/
     }
 
     &__bouton-choix4 {
         grid-area: bouton4;
-        animation: apparition 1000ms ease-out 300ms ;
+       /* animation: apparition 1000ms ease-out 300ms ;*/
     }
 
 

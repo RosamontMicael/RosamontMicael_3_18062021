@@ -101,16 +101,19 @@
 }
 
 .cat-entree {
-    @include categorie-type
+    @include categorie-type;
+    animation: apparition 1000ms ease-out 150ms both;
 }
 
 .cat-plat {
     @include categorie-type;
+    animation: apparition 1000ms ease-out 650ms both;
     
     
 }
 
 .cat-dessert {
     @include categorie-type;
+    animation: apparition 1000ms ease-out 1150ms both;
 }
 
