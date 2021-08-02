@@ -1,11 +1,7 @@
-/*---------------------------------*/
 /*--------INFOS VARIABLES------*/
-/*---------------------------------*/
 /*---DEFINITION PALETTE COULEUR----*/
 /*---DEFINITION DIMENSION DE BASE----*/
-/*---------------------------------*/
 /*----PARAMETRES GENERAUX-----*/
-/*---------------------------------*/
 /*Base*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
@@ -19,7 +15,7 @@
 .blocpage {
   width: 100%;
   max-width: 1440px;
-  min-width: 375px;
+  min-width: 230px;
   margin: auto;
   background-color: white;
 }
@@ -60,9 +56,7 @@ a {
   color: black;
 }
 
-/*---------------------------------*/
 /*----COMPOSANTS-----*/
-/*---------------------------------*/
 /*-----KEYFRAMES-----*/
 /*-----Apparition du loader-----*/
 @keyframes loader-apparition {
@@ -196,7 +190,7 @@ a {
   background-clip: text;
   -webkit-background-clip: text;
   background-image: linear-gradient(#6023a9, #ff13be);
-  -webkit-text-fill-color: transparent;
+  color: transparent;
   display: block;
   position: absolute;
   top: 0px;
@@ -350,9 +344,7 @@ Choix du menu*/
   transform: rotate(0deg);
 }
 
-/*---------------------------------*/
 /*----LAYOUTS-----*/
-/*---------------------------------*/
 .header {
   display: flex;
   justify-content: center;
@@ -645,9 +637,7 @@ Choix du menu*/
   /* animation: apparition 1000ms ease-out 300ms ;*/
 }
 
-/*---------------------------------*/
 /*----PAGES-----*/
-/*---------------------------------*/
 .localisation {
   width: 100%;
   background: linear-gradient(to bottom, #cccccc 0%, #e6e6e6 10%);
@@ -767,6 +757,13 @@ Choix du menu*/
   background-color: #f2f2f2;
   padding: 20px 0px;
   cursor: pointer;
+}
+
+@media screen and (max-width: 375px) {
+  .fonctionnement__etape {
+    width: 100%;
+    padding-right: 10px;
+  }
 }
 
 .fonctionnement__etape:hover {

@@ -1,36 +1,28 @@
-/*---------------------------------*/
-  /*--------INFOS VARIABLES------*/
-/*---------------------------------*/
+/*--------INFOS VARIABLES------*/
 @import "./utils/variable";
 @import "./utils/mixin";
 
-/*---------------------------------*/
-  /*----PARAMETRES GENERAUX-----*/
-/*---------------------------------*/
+/*----PARAMETRES GENERAUX-----*/
+
 
 @import "./base/base";
 @import "./base/typographie";
 
-/*---------------------------------*/
-       /*----COMPOSANTS-----*/
-/*---------------------------------*/
+/*----COMPOSANTS-----*/
 
 @import "./composants/loader";
 @import "./composants/coeur";
 @import "./composants/boutton";
 
-/*---------------------------------*/
-       /*----LAYOUTS-----*/
-/*---------------------------------*/
+/*----LAYOUTS-----*/
+
 
 @import "./layout/l-header";
 @import "./layout/l-footer";
 @import "./layout/l-cartemenusrestaurants";
 
-/*---------------------------------*/
-       /*----PAGES-----*/
-/*---------------------------------*/
 
+/*----PAGES-----*/
 
 @import "./pages/accueil";
 

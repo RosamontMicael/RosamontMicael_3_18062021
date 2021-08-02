@@ -24,7 +24,7 @@
       darken($couleur-primaire, 20%),
       darken($couleur-secondaire, 20%)
     );
-    -webkit-text-fill-color: transparent;
+    color: transparent;
 
     display: block;
     position: absolute;

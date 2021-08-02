@@ -114,6 +114,11 @@
     padding: 20px 0px;
     cursor: pointer;
 
+    @media screen and (max-width: 375px) {
+      width: 100%;
+      padding-right: 10px;    
+    }
+
     &:hover {
       background-color: lighten($couleur-primaire, 35%);
       @include box-shadow(5px, 5px, 10px, $couleurFond2-actif);
