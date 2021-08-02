@@ -87,7 +87,7 @@ a {
   justify-content: center;
   align-items: center;
   z-index: -1;
-  animation: loader-apparition 3800ms;
+  animation: loader-apparition 2800ms;
 }
 
 .loader-conteneur::after {
