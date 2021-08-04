@@ -186,7 +186,6 @@ a {
 
 .coeur__plein {
   font-weight: 900;
-  background-clip: text;
   -webkit-background-clip: text;
   background-image: linear-gradient(#6023a9, #ff13be);
   color: transparent;
