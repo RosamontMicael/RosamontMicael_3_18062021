@@ -254,6 +254,7 @@ Commandez*/
 Choix du menu*/
 .btn-menus {
   display: flex;
+  position: relative;
   max-width: 350px;
   height: 65px;
   border-radius: 15px;
@@ -290,7 +291,6 @@ Choix du menu*/
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  transition: width 200ms 100ms;
 }
 
 .btn-menus__prix {
@@ -304,23 +304,26 @@ Choix du menu*/
   margin-right: 10px;
   padding-bottom: 10px;
   /*transform: translateX(100%);*/
-  transition: 490ms 10ms ease-out;
+  transition: 490ms ease-out;
 }
 
 .btn-menus:hover > .btn-menus__prix {
-  transform: translateX(0%) scaleX(1.2);
+  padding-right: 75px;
+  margin-left: 20px;
 }
 
 .btn-menus__cadreicone-check {
+  position: absolute;
+  right: -50px;
   background-color: #99E2D0;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 0px;
+  width: 50px;
   /**/
   height: 100%;
   /*transform: translateX(101%);*/
-  transition: 500ms ease-out;
+  transition: 490ms  10ms ease-out;
 }
 
 .btn-menus__cadreicone-check i {
@@ -331,12 +334,13 @@ Choix du menu*/
 }
 
 .btn-menus:hover > .btn-menus__cadreicone-check {
-  /*transform: translateX(0);*/
-  width: 60px;
+  /*transform: translateX(0);
+    width: 60px;*/
+  transform: translateX(-50px);
 }
 
 .btn-menus:hover > .btn-menus__cadreicone-check i {
-  animation: rotatecheck 500ms 00ms ease-out forwards;
+  animation: rotatecheck 490ms 10ms ease-out forwards;
   /*transform: rotate(0deg);*/
 }
 
