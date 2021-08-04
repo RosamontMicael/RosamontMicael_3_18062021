@@ -1,8 +1,7 @@
 .carte {
-    @media screen and ( max-width:1000px) {
-    height: $hauteur-carte-mobile - $decallage-carte-mobile;
-    }
-    
+    display: flex;
+    flex-direction:column;
+        
     img {
         width:100%;
         height: 275px;
@@ -14,19 +13,20 @@
     }
 
     &__menus {
-        position: relative;
-        top:$decallage-carte-mobile*(-1);
+        z-index: 1;
+      
         max-width:1110px;
-
+        width:100%;
+        
         border-radius: 40px 40px 0 0;
-        margin:auto;
+        margin: auto;
 
-        background-color:darken($couleurFond1,5%);
-        padding: 40px 15px;
+       background-color:darken($couleurFond1,5%);
+       padding: 40px 15px;
 
-        @media screen and ( min-width:1000px) {
-           top:$decallage-carte-desktop*(-1);
-           border-radius: 40px 40px 40px 40px;
+        @media screen and ( min-width:100px) {
+           margin-top:$decallage-carte-mobile*(-1);         
+           border-radius: 40px 40px 0px 0px;
         }
         
     }
@@ -36,7 +36,7 @@
 
 .menus {
     display: grid;
-    grid-template-columns: 1fr 20%;
+    grid-template-columns: 80% 20%;
     grid-template-rows: repeat(3,auto);
     row-gap: 10px;
     grid-template-areas: 
@@ -68,6 +68,7 @@
     }
 
     &__grille-categories {
+        width: 100%;
         grid-area: grillcat;
 
         @media screen and ( min-width:1110px) {
@@ -102,17 +103,18 @@
 
 .cat-entree {
     @include categorie-type;
+    width:100%;
     animation: apparition 1000ms ease-out 150ms both;
 }
 
 .cat-plat {
-    @include categorie-type;
+    @include categorie-type; width:100%;
     animation: apparition 1000ms ease-out 650ms both;
     
     
 }
 
-.cat-dessert {
+.cat-dessert { width:100%;
     @include categorie-type;
     animation: apparition 1000ms ease-out 1150ms both;
 }

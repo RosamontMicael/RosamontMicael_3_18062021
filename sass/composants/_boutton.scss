@@ -12,111 +12,110 @@ Commandez*/
 Choix du menu*/
 
 .btn-menus {
+  display: flex;
+
+  max-width: 350px;
+  height: 65px;
+
+  border-radius: 15px;
+  margin: auto;
+
+  background-color: $couleurFond1;
+  @include box-shadow;
+
+  cursor: pointer;
+  overflow: hidden;
+
+  &:hover {
+    @include box-shadow(5px, 5px, 10px, $couleurFond2-actif);
+    @include zoom;
+  }
+
+  &__description {
+    display: block;
+    width: 100%; 
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    padding: 10px 10px 15px 10px;
+
+    
+  }
+
+  &__nom {
+    padding-bottom: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+  }
+
+  
+  &__soustitre {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    transition: width 200ms 100ms;
+   
+  }
+
+  
+  &__prix {
+    /*display: block;*/
     display: flex;
-    
-    max-width: 350px;
-    height: 65px;
+    justify-content: center;
+    align-items: flex-end;
+    font-weight: bold;
+    width: 50px;
+    height: 100%;
+    margin-right: 10px;
 
-    border-radius: 15px;
-    margin: auto;
-        
-    background-color:$couleurFond1;
-    @include box-shadow;
+    padding-bottom: 10px;
+    /*transform: translateX(100%);*/
+    transition: 490ms 10ms ease-out;
+  }
 
-    cursor:pointer;   overflow: hidden; 
+  &:hover > .btn-menus__prix {
+    transform: translateX(0%) scaleX(1.2);
+  }
 
-    &:hover {
-        @include box-shadow (5px,5px,10px,$couleurFond2-actif);
-        @include zoom;
-        
+  &__cadreicone-check {
+    background-color: $couleur-tertiaire;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0px; /**/
+    height: 100%;
+
+    /*transform: translateX(101%);*/
+    transition: 500ms ease-out;
+
+    i {
+      color: $couleurFond1;
+      font-size: 1.2rem;
+      transform: rotate(-360deg);
+      /*transition: 500ms 200ms ease-out forwards;*/
     }
+  }
 
-
-    &__description {
-        
-        width: 290px;
-       
-        white-space: nowrap;
-        
-        text-overflow:ellipsis;
-        
-        padding: 10px 0px 15px 10px;
-        
-        
+  &:hover > .btn-menus__cadreicone-check {
+    /*transform: translateX(0);*/
+    width: 60px;
+    i {
+        animation: rotatecheck 500ms 00ms ease-out forwards  ;
+      /*transform: rotate(0deg);*/
     }
-
-    &__nom {
-        padding-bottom: 5px;
-       white-space: nowrap;
-        
-        text-overflow:ellipsis;
-      
-       
-    }
-
-    &:hover > .btn-menus__description {
-    .btn-menus__nom {
-       width: 250px;
-    }
-    }
-
-    &__soustitre {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow:ellipsis ;
-        width: 290px;
-        transition : width 200ms 100ms ;    
-        
-    } 
-        
-    &:hover > .btn-menus__description {
-    .btn-menus__soustitre {
-       width: 245px;
-    }
-    }
-    
-    &__prix { 
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-        font-weight: bold;
-        width: 50px;height:100%; margin-right: 10px;
-
-        padding-bottom: 10px;
-        transform: translateX(100%);
-        transition: 490ms 10ms ease-out;
-    }
-
-    &:hover > .btn-menus__prix {
-         transform: translateX(0%) scaleX(1.2);         
-    }
-    
-
-    &__cadreicone-check {
-        background-color: $couleur-tertiaire;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 50px;
-        height:100%;   
-
-        transform: translateX(101%);
-        transition:500ms ease-out ;
-        i {
-            color:$couleurFond1 ;
-            font-size: 1.2rem;
-            transform: rotate(-180deg);
-            transition: 200ms 200ms ease-out;
-            
-        }
-    }
-    
-    &:hover > .btn-menus__cadreicone-check {
-        transform: translateX(0);
-        i {
-             transform: rotate(0deg);
-        }
-    }
-    
+  }
 }
 
+@keyframes rotatecheck {
+    from {transform: rotate(-360deg);
+    }
+
+    to {
+        transform: rotate(0deg) ;
+    }
+}

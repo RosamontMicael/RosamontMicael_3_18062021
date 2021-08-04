@@ -15,7 +15,6 @@
 .blocpage {
   width: 100%;
   max-width: 1440px;
-  min-width: 230px;
   margin: auto;
   background-color: white;
 }
@@ -273,35 +272,30 @@ Choix du menu*/
 }
 
 .btn-menus__description {
-  width: 290px;
+  display: block;
+  width: 100%;
   white-space: nowrap;
+  overflow: hidden;
   text-overflow: ellipsis;
-  padding: 10px 0px 15px 10px;
+  padding: 10px 10px 15px 10px;
 }
 
 .btn-menus__nom {
   padding-bottom: 5px;
   white-space: nowrap;
+  overflow: hidden;
   text-overflow: ellipsis;
-}
-
-.btn-menus:hover > .btn-menus__description .btn-menus__nom {
-  width: 250px;
 }
 
 .btn-menus__soustitre {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 290px;
   transition: width 200ms 100ms;
 }
 
-.btn-menus:hover > .btn-menus__description .btn-menus__soustitre {
-  width: 245px;
-}
-
 .btn-menus__prix {
+  /*display: block;*/
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -310,7 +304,7 @@ Choix du menu*/
   height: 100%;
   margin-right: 10px;
   padding-bottom: 10px;
-  transform: translateX(100%);
+  /*transform: translateX(100%);*/
   transition: 490ms 10ms ease-out;
 }
 
@@ -323,25 +317,37 @@ Choix du menu*/
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50px;
+  width: 0px;
+  /**/
   height: 100%;
-  transform: translateX(101%);
+  /*transform: translateX(101%);*/
   transition: 500ms ease-out;
 }
 
 .btn-menus__cadreicone-check i {
   color: white;
   font-size: 1.2rem;
-  transform: rotate(-180deg);
-  transition: 200ms 200ms ease-out;
+  transform: rotate(-360deg);
+  /*transition: 500ms 200ms ease-out forwards;*/
 }
 
 .btn-menus:hover > .btn-menus__cadreicone-check {
-  transform: translateX(0);
+  /*transform: translateX(0);*/
+  width: 60px;
 }
 
 .btn-menus:hover > .btn-menus__cadreicone-check i {
-  transform: rotate(0deg);
+  animation: rotatecheck 500ms 00ms ease-out forwards;
+  /*transform: rotate(0deg);*/
+}
+
+@keyframes rotatecheck {
+  from {
+    transform: rotate(-360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
 }
 
 /*----LAYOUTS-----*/
@@ -416,10 +422,9 @@ Choix du menu*/
   width: 10px;
 }
 
-@media screen and (max-width: 1000px) {
-  .carte {
-    height: 1434px;
-  }
+.carte {
+  display: flex;
+  flex-direction: column;
 }
 
 .carte img {
@@ -435,25 +440,25 @@ Choix du menu*/
 }
 
 .carte__menus {
-  position: relative;
-  top: -40px;
+  z-index: 1;
   max-width: 1110px;
+  width: 100%;
   border-radius: 40px 40px 0 0;
   margin: auto;
   background-color: #f2f2f2;
   padding: 40px 15px;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 100px) {
   .carte__menus {
-    top: -100px;
-    border-radius: 40px 40px 40px 40px;
+    margin-top: -40px;
+    border-radius: 40px 40px 0px 0px;
   }
 }
 
 .menus {
   display: grid;
-  grid-template-columns: 1fr 20%;
+  grid-template-columns: 80% 20%;
   grid-template-rows: repeat(3, auto);
   row-gap: 10px;
   grid-template-areas: 'titre coeur'  'grillcat grillcat' 'conteneur-btn conteneur-btn';
@@ -475,6 +480,7 @@ Choix du menu*/
 }
 
 .menus__grille-categories {
+  width: 100%;
   grid-area: grillcat;
 }
 
@@ -507,14 +513,16 @@ Choix du menu*/
 
 .cat-entree {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 100%;
   grid-template-rows: 50px 10px 70px 70px 70px auto;
   row-gap: 10px;
   grid-template-areas: 'titre' 'sep' 'bouton1' 'bouton2' 'bouton3' 'bouton4';
+  width: 100%;
   animation: apparition 1000ms ease-out 150ms both;
 }
 
 .cat-entree__titre {
+  width: 100%;
   grid-area: titre;
   margin-top: 10px;
   padding-top: 20px;
@@ -523,6 +531,7 @@ Choix du menu*/
 }
 
 .cat-entree__separateur {
+  width: 100%;
   grid-area: sep;
   width: 45px;
   height: 1px;
@@ -530,35 +539,41 @@ Choix du menu*/
 }
 
 .cat-entree__bouton-choix1 {
+  width: 100%;
   grid-area: bouton1;
   /*animation: apparition 1000ms ease-out  ;*/
 }
 
 .cat-entree__bouton-choix2 {
+  width: 100%;
   grid-area: bouton2;
   /* animation: apparition 1000ms ease-out 150ms ;*/
 }
 
 .cat-entree__bouton-choix3 {
+  width: 100%;
   grid-area: bouton3;
   /* animation: apparition 1000ms ease-out 300ms ;*/
 }
 
 .cat-entree__bouton-choix4 {
+  width: 100%;
   grid-area: bouton4;
   /* animation: apparition 1000ms ease-out 300ms ;*/
 }
 
 .cat-plat {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 100%;
   grid-template-rows: 50px 10px 70px 70px 70px auto;
   row-gap: 10px;
   grid-template-areas: 'titre' 'sep' 'bouton1' 'bouton2' 'bouton3' 'bouton4';
+  width: 100%;
   animation: apparition 1000ms ease-out 650ms both;
 }
 
 .cat-plat__titre {
+  width: 100%;
   grid-area: titre;
   margin-top: 10px;
   padding-top: 20px;
@@ -567,6 +582,7 @@ Choix du menu*/
 }
 
 .cat-plat__separateur {
+  width: 100%;
   grid-area: sep;
   width: 45px;
   height: 1px;
@@ -574,28 +590,33 @@ Choix du menu*/
 }
 
 .cat-plat__bouton-choix1 {
+  width: 100%;
   grid-area: bouton1;
   /*animation: apparition 1000ms ease-out  ;*/
 }
 
 .cat-plat__bouton-choix2 {
+  width: 100%;
   grid-area: bouton2;
   /* animation: apparition 1000ms ease-out 150ms ;*/
 }
 
 .cat-plat__bouton-choix3 {
+  width: 100%;
   grid-area: bouton3;
   /* animation: apparition 1000ms ease-out 300ms ;*/
 }
 
 .cat-plat__bouton-choix4 {
+  width: 100%;
   grid-area: bouton4;
   /* animation: apparition 1000ms ease-out 300ms ;*/
 }
 
 .cat-dessert {
+  width: 100%;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 100%;
   grid-template-rows: 50px 10px 70px 70px 70px auto;
   row-gap: 10px;
   grid-template-areas: 'titre' 'sep' 'bouton1' 'bouton2' 'bouton3' 'bouton4';
@@ -603,6 +624,7 @@ Choix du menu*/
 }
 
 .cat-dessert__titre {
+  width: 100%;
   grid-area: titre;
   margin-top: 10px;
   padding-top: 20px;
@@ -611,6 +633,7 @@ Choix du menu*/
 }
 
 .cat-dessert__separateur {
+  width: 100%;
   grid-area: sep;
   width: 45px;
   height: 1px;
@@ -618,21 +641,25 @@ Choix du menu*/
 }
 
 .cat-dessert__bouton-choix1 {
+  width: 100%;
   grid-area: bouton1;
   /*animation: apparition 1000ms ease-out  ;*/
 }
 
 .cat-dessert__bouton-choix2 {
+  width: 100%;
   grid-area: bouton2;
   /* animation: apparition 1000ms ease-out 150ms ;*/
 }
 
 .cat-dessert__bouton-choix3 {
+  width: 100%;
   grid-area: bouton3;
   /* animation: apparition 1000ms ease-out 300ms ;*/
 }
 
 .cat-dessert__bouton-choix4 {
+  width: 100%;
   grid-area: bouton4;
   /* animation: apparition 1000ms ease-out 300ms ;*/
 }

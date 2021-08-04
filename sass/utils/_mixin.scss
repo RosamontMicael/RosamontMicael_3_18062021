@@ -79,7 +79,8 @@
 
 @mixin categorie-type {
 display: grid;
-    grid-template-columns: 1fr;
+ 
+    grid-template-columns: 100%;
     grid-template-rows: 50px 10px 70px 70px 70px auto;
     row-gap: 10px;
     grid-template-areas:
@@ -90,7 +91,7 @@ display: grid;
     'bouton3'
     'bouton4';
     
-    &__titre {
+    &__titre { width: 100%;
         grid-area: titre;
 
         margin-top: 10px;
@@ -99,7 +100,7 @@ display: grid;
         text-transform:uppercase;
         font-size: 1.1rem;
     }
-    &__separateur {
+    &__separateur {  width: 100%;
         grid-area: sep;
 
         width: 45px;
@@ -107,22 +108,22 @@ display: grid;
         border-top:cadetblue 2px solid;
     }
 
-    &__bouton-choix1 {        
+    &__bouton-choix1 {       width: 100%; 
         grid-area: bouton1;
         /*animation: apparition 1000ms ease-out  ;*/
     }
 
-    &__bouton-choix2 {        
+    &__bouton-choix2 {        width: 100%;
         grid-area: bouton2;
        /* animation: apparition 1000ms ease-out 150ms ;*/
     }
 
-    &__bouton-choix3 {
+    &__bouton-choix3 {width: 100%;
         grid-area: bouton3;
        /* animation: apparition 1000ms ease-out 300ms ;*/
     }
 
-    &__bouton-choix4 {
+    &__bouton-choix4 {width: 100%;
         grid-area: bouton4;
        /* animation: apparition 1000ms ease-out 300ms ;*/
     }
